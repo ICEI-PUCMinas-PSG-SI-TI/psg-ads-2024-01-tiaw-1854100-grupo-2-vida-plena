@@ -1,10 +1,13 @@
 # Nome do projeto
+Vida Plena
+O objetivo do nosso grupo será desenvolver um projeto que possa ajudar os idosos a se comuicarem e obterem informações de um jeito simplificado, incluindo eles a sociedade com criação de campanhas e eventos, nosso Projeto será feito com front-end utilizando Html, CSS e Java Script.
+
 Escreva um ou dois parágrafos resumindo o objetivo do seu projeto.
 
 ## Alunos integrantes da equipe
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
+* Luiz Ribeiro de Andrade Neto
+* Igor Ferreira Ramos
 * Nome completo do aluno 3
 * Nome completo do aluno 4
 * Nome completo do aluno 4
@@ -12,8 +15,8 @@ Escreva um ou dois parágrafos resumindo o objetivo do seu projeto.
 
 ## Professores responsáveis
 
-* Nome completo do professor 1
-* Nome completo do professor 2
+* Felipe Reis
+* Caroline Rhaian
 
 ## Quadro de tarefas
 Coloque aqui o link para acesso do Kanban do projeto, seja ele no GitHub ou em outra plataforma.
