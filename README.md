@@ -1,8 +1,6 @@
-# Nome do projeto
-Vida Plena
-O objetivo do nosso grupo será desenvolver um projeto que possa ajudar os idosos a se comuicarem e obterem informações de um jeito simplificado, incluindo eles a sociedade com criação de campanhas e eventos, nosso Projeto será feito com front-end utilizando Html, CSS e Java Script.
-
-Escreva um ou dois parágrafos resumindo o objetivo do seu projeto.
+# Vida Plena
+O objetivo do nosso grupo será desenvolver um projeto que possa ajudar os idosos a se comuicarem e obterem informações de um jeito simplificado, incluindo eles a sociedade com criação de campanhas e eventos.
+Nosso Projeto será feito com front-end utilizando Html, CSS e Java Script.
 
 ## Alunos integrantes da equipe
 
