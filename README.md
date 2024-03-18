@@ -8,7 +8,7 @@ Escreva um ou dois parágrafos resumindo o objetivo do seu projeto.
 
 * Luiz Ribeiro de Andrade Neto
 * Igor Ferreira Ramos
-* Nome completo do aluno 3
+* Domiciano Gabriel Negrini Vieira
 * Nome completo do aluno 4
 * Nome completo do aluno 4
 * Nome completo do aluno 4
