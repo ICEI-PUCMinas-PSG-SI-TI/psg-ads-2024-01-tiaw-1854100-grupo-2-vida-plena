@@ -7,7 +7,7 @@ Nosso Projeto será feito com front-end utilizando Html, CSS e Java Script.
 * Luiz Ribeiro de Andrade Neto
 * Igor Ferreira Ramos
 * Domiciano Gabriel Negrini Vieira
-* Nome completo do aluno 4
+* Lucas Phillipe Freitas Dias
 * Nome completo do aluno 4
 * Nome completo do aluno 4
 
