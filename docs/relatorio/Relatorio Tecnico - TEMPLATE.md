@@ -12,9 +12,13 @@ Analise e Desenvolvimento de Sistemas.
 ......  COLOQUE AQUI O SEU TEXTO ......
 
 
-> Os membros do grupo são: 
+> Os membros do grupo são:
+> - Domiciano Gabriel Negrini Vieira
+> - Igor Ferreira Ramos
+> - João Vitor Filgueira Araújo de Castro
+> - Lucas Phillipe Freitas Dias
 > - Luiz Ribeiro de Andrade Neto
-> - 
+> - Pedro Henrique Freitas Dias
 
 # Estrutura do Documento
 
@@ -38,7 +42,8 @@ Analise e Desenvolvimento de Sistemas.
 
 ## Problema
 
-......  COLOQUE AQUI O SEU TEXTO ......
+É notório no Brasil a recorrência do assunto relacionado a saúde mental dos idosos nos noticiários. Alguns dados fornecidos pela Scielo, dizem que "As taxas de suicídio mais elevadas concentram-se na população acima de 80 anos", assim como outro dado apresentado pelo Governo Federal que constata que "Em 2019, os idosos entre 60 e 64 anos representavam a faixa etária proporcionalmente mais afetada: 13,2% tinham sido diagnosticados com depressão", evidenciando portanto, um problema que ocorre por todo o Brasil, tornando-se assim uma preocupação nacional.
+
 
 > Nesse momento você deve apresentar o problema que a sua aplicação deve
 > resolver. No entanto, não é a hora de comentar sobre a aplicação.
