@@ -1,21 +1,20 @@
 # Informações do Projeto
 `TÍTULO DO PROJETO`  
 
-......  COLOQUE AQUI O SEU TEXTO ......
+Vida Plena
 
 `CURSO` 
 
-......  COLOQUE AQUI O SEU TEXTO ......
+Analise e Desenvolvimento de Sistemas.
 
 ## Participantes
 
 ......  COLOQUE AQUI O SEU TEXTO ......
 
-> Inclua a lista dos membros da equipe com seus nomes completos.
->
+
 > Os membros do grupo são: 
-> - Fulano da Silva
-> - Ciclano Albuquerque
+> - Luiz Ribeiro de Andrade Neto
+> - 
 
 # Estrutura do Documento
 
