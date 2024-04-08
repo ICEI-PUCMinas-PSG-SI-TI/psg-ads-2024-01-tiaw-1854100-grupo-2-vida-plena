@@ -21,3 +21,6 @@ https://github.com/orgs/ICEI-PUCMinas-PSG-SI-TI/projects/32/views/1
 
 ## Instruções para uso
 Coloque aqui as instruções para acessar a página inicial do projeto (caminho completo do arquivo).
+
+
+https://miro.com/welcomeonboard/dllGckVwV0lwcW9Sd0hZNWJKVjJVbHRIZDFDR1owOE9NbkZrWHJpVDUzN1Y5ZVBPMVdwaDh4V3ZDYm1DdzdhSXwzNDU4NzY0NTg0OTI4MTUwNzQ1fDI=?share_link_id=842113225477
