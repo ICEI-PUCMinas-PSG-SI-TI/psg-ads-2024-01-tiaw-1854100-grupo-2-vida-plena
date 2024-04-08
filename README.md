@@ -1,5 +1,5 @@
 # Vida Plena
-O objetivo do nosso grupo será desenvolver um projeto que possa ajudar os idosos a se comuicarem e obterem informações de um jeito simplificado, incluindo eles a sociedade com criação de campanhas e eventos.
+O objetivo do nosso grupo será desenvolver um projeto que possa ajudar os idosos a se comuicarem e obterem informações sobre Saude e bem Estar de um jeito simplificado, incluindo eles a sociedade com criação de campanhas e eventos entre eles.
 Nosso Projeto será feito com front-end utilizando Html, CSS e Java Script.
 
 ## Alunos integrantes da equipe
