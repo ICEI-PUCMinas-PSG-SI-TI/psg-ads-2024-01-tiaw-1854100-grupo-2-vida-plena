@@ -113,7 +113,6 @@ A tabela a seguir apresenta os requisitos não funcionais que o projeto deverá 
 |ID    |               Descrição do Requisito                               | Prioridade |
 |------|-----------------------------------------------------------------------|-------|
 |RF-001| O site deve ter interface simples e agradável ao usuário              | ALTA  | 
-|RF-004| Permitir que o Usuario consulte eventos disponiveis.                  | MÉDIA |
 |RF-005| O site deve ser responsivo e funcionar em desktop, celular e tablet.  | MÉDIA |
 |RF-006| O site deve ser compatível com os principais navegadores do mercado.  | ALTA  |
 
