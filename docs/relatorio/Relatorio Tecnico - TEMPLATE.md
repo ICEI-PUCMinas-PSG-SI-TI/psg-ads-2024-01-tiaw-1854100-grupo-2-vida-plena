@@ -69,7 +69,7 @@ Pessoas acima de 65 anos, que desejam fazer novas amizades, participar de evento
 
 ## Personas
 
-(images/persona-maria_page-0001.jpg)
+> ![Persona](images/persona-maria_page-0001.jpg)
  
 ## Histórias de Usuários
 
