@@ -8,10 +8,6 @@ Vida Plena
 Analise e Desenvolvimento de Sistemas.
 
 ## Participantes
-
-......  COLOQUE AQUI O SEU TEXTO ......
-
-
 > Os membros do grupo são:
 > - Domiciano Gabriel Negrini Vieira
 > - Igor Ferreira Ramos
