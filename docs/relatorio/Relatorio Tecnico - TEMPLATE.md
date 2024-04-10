@@ -59,26 +59,13 @@ Analise e Desenvolvimento de Sistemas.
 
 ## Público-Alvo
 
-......  COLOQUE AQUI O SEU TEXTO ......
+Pessoas acima de 65 anos, que desejam fazer novas amizades, participar de eventos e atividades sociais, que buscam informações sobre saúde, bem-estar físico e mental, dicas de exercícios adequados à idade, nutrição e cuidados preventivos.
 
-> Descreva quem serão as pessoas que usarão a sua aplicação indicando os
-> diferentes perfis. O objetivo aqui não é definir quem serão os
-> clientes ou quais serão os papéis dos usuários na aplicação. A ideia
-> é, dentro do possível, conhecer um pouco mais sobre o perfil dos
-> usuários: conhecimentos prévios, relação com a tecnologia, relações
-> hierárquicas, etc.
->
-> Adicione informações sobre o público-alvo por meio de uma descrição
-> textual, ou diagramas de personas, mapa de stakeholders, ou como o
-> grupo achar mais conveniente.
-> 
-> **Links Úteis**:
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
- 
 # Especificações do Projeto
 
-......  COLOQUE AQUI O SEU TEXTO ......
+> Plataforma que promove encontros de pessoas.
+> Feed de noticias.
+> 
 
 > Apresente uma visão geral do que será abordado nesta parte do
 > documento, enumerando as técnicas e/ou ferramentas utilizadas para
@@ -86,25 +73,8 @@ Analise e Desenvolvimento de Sistemas.
 
 ## Personas
 
-......  COLOQUE AQUI O SEU TEXTO ......
-
-> Relacione as personas identificadas no seu projeto. Lembre-se que 
-> você deve descrever precisamente e de forma personalizada o público alvo do seu projeto. 
-> Você pode incluir uma imagem da ficha de persona desenvolvida. 
->
-> Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina
-> e/ou nos seguintes links:
->
-> **Links Úteis**:
-> - [Persona x Público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-> - [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-> - [Rock Content](https://rockcontent.com/blog/personas/)
-> - [Hotmart](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
-> 
-> **Exemplo de Ficha**
-> ![Exemplo de Persona](images/persona-maria_page-0001.jpg)
+(images/persona-maria_page-0001.jpg)
  
-
 ## Histórias de Usuários
 
 Com base na análise das personas forma identificadas as seguintes histórias de usuários:
@@ -125,22 +95,36 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 
 ## Requisitos
 
-A tabela que segue apresenta os requisitos funcionais do projeto. 
-
 ### Requisitos Funcionais
+A tabela a seguir apresenta os requisitos funcionais que o projeto deverá atender.
 
-|ID    | Descrição do Requisito  | Prioridade |
-|------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
+|ID    |             Descrição do Requisito                 | Prioridade |
+|------|------------------------------------------------------|-------|
+|RF-001| Permitir que o Usuario Cadastre e faça Login.        | ALTA  | 
+|RF-002| Permitir que o Usuario Crie seu Evento.              | ALTA  |
+|RF-003| Permitir que o Usuario Compartilhe Evento.           | Alta  |
+|RF-004| Permitir que o Usuario consulte eventos disponiveis. | MÉDIA |
+|RF-005| O sistema devera notificar o usuario de seu evento.  | MÉDIA |
+|RF-006| Permitir que o Usuario consulte suas duvidas.        | ALTA  |
 
+### Requisitos não Funcionais
+A tabela a seguir apresenta os requisitos não funcionais que o projeto deverá atender.
 
-> Com base nas Histórias de Usuário, enumere os requisitos da sua
-> solução. Classifique esses requisitos em dois grupos:
->
-> Lembre-se que cada requisito deve corresponder à uma e somente uma
-> característica alvo da sua solução. Além disso, certifique-se de que
-> todos os aspectos capturados nas Histórias de Usuário foram cobertos.
+|ID    |               Descrição do Requisito                               | Prioridade |
+|------|-----------------------------------------------------------------------|-------|
+|RF-001| O site deve ter interface simples e agradável ao usuário              | ALTA  | 
+|RF-004| Permitir que o Usuario consulte eventos disponiveis.                  | MÉDIA |
+|RF-005| O site deve ser responsivo e funcionar em desktop, celular e tablet.  | MÉDIA |
+|RF-006| O site deve ser compatível com os principais navegadores do mercado.  | ALTA  |
+
+### Restrições 
+As questões que limitam a execução desse projeto e que se configuram como obrigações claras para o desenvolvimento do projeto em questão são apresentadas na tabela a seguir.
+
+ID	Restrição
+01	O projeto deverá ser entregue no final do semestre letivo de 2023
+02	O site deve se restringir às tecnologias básicas da Web no Frontend
+03	A equipe não pode subcontratar o desenvolvimento do trabalho
+04	A equipe, caso utilize, fará da inteligência artificial uma ferramenta, e não uma plataforma de desenvolvimento de código.
 
 # Projeto da Solução
 
