@@ -44,15 +44,6 @@ Analise e Desenvolvimento de Sistemas.
 
 É notório no Brasil a recorrência do assunto relacionado a saúde mental dos idosos nos noticiários. Alguns dados fornecidos pela Scielo, dizem que "As taxas de suicídio mais elevadas concentram-se na população acima de 80 anos", assim como outro dado apresentado pelo Governo Federal que constata que "Em 2019, os idosos entre 60 e 64 anos representavam a faixa etária proporcionalmente mais afetada: 13,2% tinham sido diagnosticados com depressão", evidenciando portanto, um problema que ocorre por todo o Brasil, tornando-se assim uma preocupação nacional.
 
-
-> Nesse momento você deve apresentar o problema que a sua aplicação deve
-> resolver. No entanto, não é a hora de comentar sobre a aplicação.
-> Descreva também o contexto em que essa aplicação será usada, se
-> houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de
-> fato existir, pois ainda não é a hora de apresentar requisitos
-> detalhados ou projetos. Utilize como base a ficha inicial de detalhamento do problema.
->
-
 ## Objetivos
 
 ......  COLOQUE AQUI O SEU TEXTO ......
