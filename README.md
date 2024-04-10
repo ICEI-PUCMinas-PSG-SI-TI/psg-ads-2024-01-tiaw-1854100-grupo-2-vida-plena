@@ -24,5 +24,6 @@ Coloque aqui as instruções para acessar a página inicial do projeto (caminho 
 
 Design Thinking
 https://miro.com/welcomeonboard/dllGckVwV0lwcW9Sd0hZNWJKVjJVbHRIZDFDR1owOE9NbkZrWHJpVDUzN1Y5ZVBPMVdwaDh4V3ZDYm1DdzdhSXwzNDU4NzY0NTg0OTI4MTUwNzQ1fDI=?share_link_id=842113225477
+
 Wireframe
 https://www.figma.com/file/ccFpvED6aoVhKNmakeg52X/Untitled?type=design&node-id=4-30&mode=design&t=iIIF8vhDvHplqE28-0
