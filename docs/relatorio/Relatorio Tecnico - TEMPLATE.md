@@ -111,7 +111,7 @@ Analise e Desenvolvimento de Sistemas.
 > - [Hotmart](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
 > 
 > **Exemplo de Ficha**
-> ![Exemplo de Persona](images/persona.png)
+> ![Exemplo de Persona](images/persona-maria.pdf)
  
 
 ## Histórias de Usuários
