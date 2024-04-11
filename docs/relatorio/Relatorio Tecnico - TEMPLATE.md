@@ -36,13 +36,17 @@ Analise e Desenvolvimento de Sistemas.
   
 # Introdução
 
+Você sabia que a prática regular de atividades cognitivas, como jogos de quebra-cabeça, leitura e aprendizado de novas habilidades, pode ajudar a manter a mente afiada e até mesmo reduzir o risco de desenvolver demência? Estudos mostram que manter o cérebro ativo pode ter benefícios significativos para a saúde mental e cognitiva à medida que envelhecemos. Então, incentivar os idosos a se envolverem em atividades intelectualmente estimulantes pode ser uma ótima maneira de promover um envelhecimento saudável e vibrante!
+
 ## Problema
 
 É notório no Brasil a recorrência do assunto relacionado a saúde mental dos idosos nos noticiários. Alguns dados fornecidos pela Scielo, dizem que "As taxas de suicídio mais elevadas concentram-se na população acima de 80 anos", assim como outro dado apresentado pelo Governo Federal que constata que "Em 2019, os idosos entre 60 e 64 anos representavam a faixa etária proporcionalmente mais afetada: 13,2% tinham sido diagnosticados com depressão", evidenciando portanto, um problema que ocorre por todo o Brasil, tornando-se assim uma preocupação nacional.
 
 ## Objetivos
 
-Desenvolver um software que busca incluir pessoas por meio de eventos e campanhas, e ter informações Relevantes para a Saude e Bem estar.
+Bem-vindo ao Vida Plena - o seu espaço digital para conectar-se, celebrar e viver a vida. Estamos aqui para criar momentos significativos e enriquecedores para a comunidade de idosos, onde cada evento e campanha é uma oportunidade única de encontrar novas amizades, compartilhar experiências e explorar tudo o que a vida tem para te oferecer. Junte-se a nós enquanto navegamos por uma jornada de conexão, vitalidade e alegria, moldada pelos valores da comunidade, empatia e respeito mútuo. Está na hora de abraçar a vida plenamente - e estamos aqui para ajudá-lo nessa jornada.
+
+Buscamos desenvolver um software que busca incluir pessoas por meio de eventos e campanhas, e ter informações Relevantes para a Saude e Bem estar,
 Iremos apronfundar o desenvolvimento de inclusão por meio de eventos criado pelo site e informações de saude e um feed que terá informações sobre Saude.
 
 ## Público-Alvo
