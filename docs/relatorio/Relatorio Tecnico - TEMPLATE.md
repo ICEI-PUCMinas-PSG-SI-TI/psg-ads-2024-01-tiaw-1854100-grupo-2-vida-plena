@@ -123,15 +123,7 @@ ID	Restrição
 > Utilizamos a Ferramenta Miro para Edição e Criação Da Matriz CSD, Brainstorming, Mapa de Stakeholders e Entrevista Qualitativa. 
 
 ## Wireframes
-
-......  INCLUA AQUI OS WIREFRAMES DAS TELAS DA APLICAÇÃO COM UM BREVE DESCRITIVO ......
-
-> Wireframes são protótipos das telas da aplicação usados em design de interface para sugerir a
-> estrutura de um site web e seu relacionamentos entre suas
-> páginas. Um wireframe web é uma ilustração semelhante ao
-> layout de elementos fundamentais na interface.
-
-> ![Exemplo de Link para Wireframe](images/wireframe-example.png)
+> ![Exemplo de Link para Wireframe](images/WireFrame.pdf)
 
 
 ## Mapa de navegação
