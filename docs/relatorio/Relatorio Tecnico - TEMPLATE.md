@@ -5,7 +5,7 @@ Vida Plena
 
 `CURSO` 
 
-Analise e Desenvolvimento de Sistemas.
+Análise e Desenvolvimento de Sistemas.
 
 ## Participantes
 > Os membros do grupo são:
