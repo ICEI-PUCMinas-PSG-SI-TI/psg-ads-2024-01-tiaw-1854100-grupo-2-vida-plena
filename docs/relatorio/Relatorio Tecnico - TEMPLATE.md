@@ -126,6 +126,8 @@ ID	Restrição
 > Tela Principal onde o Usuário irar escolher o que ele deseja ver, se será criação de Eventos, Localizar Eventos Disponivels ou Feed de Informações.
 > ![Exemplo de Link para Wireframe](images/home_page.jpg)
 
+> Tela que irar informar data com todos os eventos criado e disponivels no site.
+> ![Exemplo de Link para Wireframe](images/calendario_page.jpg)
 
 ## Mapa de navegação
 
