@@ -9,12 +9,12 @@ Analise e Desenvolvimento de Sistemas.
 
 ## Participantes
 > Os membros do grupo são:
-> - Domiciano Gabriel Negrini Vieira
-> - Igor Ferreira Ramos
-> - João Vitor Filgueira Araújo de Castro
-> - Lucas Phillipe Freitas Dias
-> - Luiz Ribeiro de Andrade Neto
-> - Pedro Henrique Freitas Dias
+> Domiciano Gabriel Negrini Vieira
+> Igor Ferreira Ramos
+> João Vitor Filgueira Araújo de Castro
+> Lucas Phillipe Freitas Dias
+> Luiz Ribeiro de Andrade Neto
+> Pedro Henrique Freitas Dias
 
 # Estrutura do Documento
 
