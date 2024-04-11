@@ -123,7 +123,8 @@ ID	Restrição
 > Utilizamos a Ferramenta Miro para Edição e Criação Da Matriz CSD, Brainstorming, Mapa de Stakeholders e Entrevista Qualitativa. 
 
 ## Wireframes
-> ![Exemplo de Link para Wireframe](images/WireFrame.pdf)
+> Tela Principal onde o Usuário irar escolher o que ele deseja ver, se será criação de Eventos, Localizar Eventos Disponivels ou Feed de Informações.
+> ![Exemplo de Link para Wireframe](images/home_page.jpg)
 
 
 ## Mapa de navegação
