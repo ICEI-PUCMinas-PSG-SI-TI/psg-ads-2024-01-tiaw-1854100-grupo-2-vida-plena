@@ -42,16 +42,8 @@ Analise e Desenvolvimento de Sistemas.
 
 ## Objetivos
 
-......  COLOQUE AQUI O SEU TEXTO ......
-
-> Aqui você deve descrever os objetivos do trabalho indicando que o
-> objetivo geral é desenvolver um software para solucionar o problema
-> apresentado acima. Apresente também pelo menos 2 objetivos
-> específicos dependendo de onde você vai querer concentrar ou aprofundar
-> as características do trabalho.
-> 
-> **Link Útil**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+Desenvolver um software que busca incluir pessoas por meio de eventos e campanhas, e ter informações Relevantes para a Saude e Bem estar.
+Iremos apronfundar o desenvolvimento de inclusão por meio de eventos criado pelo site e informações de saude e um feed que terá informações sobre Saude.
 
 ## Público-Alvo
 
@@ -60,12 +52,7 @@ Pessoas acima de 65 anos, que desejam fazer novas amizades, participar de evento
 # Especificações do Projeto
 
 > Plataforma que promove encontros de pessoas.
-> Feed de noticias.
-> 
-
-> Apresente uma visão geral do que será abordado nesta parte do
-> documento, enumerando as técnicas e/ou ferramentas utilizadas para
-> realizar a especificações do projeto
+> Feed de informações de Saude e Bem estar.
 
 ## Personas
 
@@ -76,10 +63,12 @@ Pessoas acima de 65 anos, que desejam fazer novas amizades, participar de evento
 
 Com base na análise das personas forma identificadas as seguintes histórias de usuários:
 
-|EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
-|--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
-|Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
+|EU COMO... `PERSONA`| QUERO/PRECISO ...      `FUNCIONALIDADE`   |PARA ... `MOTIVO/VALOR`                 |
+|--------------------|-------------------------------------------|----------------------------------------|
+|Usuário do sistema  | Criação de  Eventos                       | Não esquecer de fazê-las               |
+|Administrador       | criação de Post                           | Permitir que possam administrar contas |
+|Administrador       | Excluir ou Editar Evento                  | Permitir que possam administrar contas |
+|Usuário do sistema  | Visualização de Eventos e Post Existentes | Não esquecer de fazê-las               |
 
 > Seguindo o modelo acima, apresente aqui as histórias de usuário que são relevantes para o
 > projeto de sua solução. As Histórias de Usuário consistem em uma
@@ -99,8 +88,8 @@ A tabela a seguir apresenta os requisitos funcionais que o projeto deverá atend
 |------|------------------------------------------------------|-------|
 |RF-001| Permitir que o Usuario Cadastre e faça Login.        | ALTA  | 
 |RF-002| Permitir que o Usuario Crie seu Evento.              | ALTA  |
-|RF-003| Permitir que o Usuario Compartilhe Evento.           | Alta  |
-|RF-004| Permitir que o Usuario consulte eventos disponiveis. | MÉDIA |
+|RF-003| Permitir que o Usuario Compartilhe Evento.           | ALTA  |
+|RF-004| Permitir que o Usuario consulte eventos disponiveis. | ALTA  |
 |RF-005| O sistema devera notificar o usuario de seu evento.  | MÉDIA |
 |RF-006| Permitir que o Usuario consulte suas duvidas.        | ALTA  |
 
@@ -110,7 +99,7 @@ A tabela a seguir apresenta os requisitos não funcionais que o projeto deverá 
 |ID    |               Descrição do Requisito                               | Prioridade |
 |------|-----------------------------------------------------------------------|-------|
 |RF-001| O site deve ter interface simples e agradável ao usuário              | ALTA  | 
-|RF-005| O site deve ser responsivo e funcionar em desktop, celular e tablet.  | MÉDIA |
+|RF-005| O site deve ser responsivo e funcionar em desktop, celular e tablet.  | ALTA  |
 |RF-006| O site deve ser compatível com os principais navegadores do mercado.  | ALTA  |
 
 ### Restrições 
@@ -124,8 +113,10 @@ ID	Restrição
 
 # Projeto da Solução
 
-......  COLOQUE AQUI O SEU TEXTO ......
-> Descreva brevemente quais tecnologias e/ou frameworks foram utilizados no projeto.
+> Será Utilizado as tecnologias aprendidas Durante o Primeiro Semestre de Desenvolvimento de Sistemas Web.
+> Utilizamos as Linguagens HTML5, CSS3 e JavaScript.
+> Utilizamos Também a Ferramenta Figma para a criação do WireFrame.
+> Utilizamos a Ferramenta Miro para Edição e Criação Da Matriz CSD, Brainstorming, Mapa de Stakeholders e Entrevista Qualitativa. 
 
 ## Wireframes
 
@@ -135,15 +126,7 @@ ID	Restrição
 > estrutura de um site web e seu relacionamentos entre suas
 > páginas. Um wireframe web é uma ilustração semelhante ao
 > layout de elementos fundamentais na interface.
-> 
-> **Links Úteis**:
-> - [Ferramentas de Wireframes](https://rockcontent.com/blog/wireframes/)
-> - [Figma](https://www.figma.com/)
-> - [Adobe XD](https://www.adobe.com/br/products/xd.html#scroll)
-> - [MarvelApp](https://marvelapp.com/developers/documentation/tutorials/)
-> 
-> **Exemplo**:
-> 
+
 > ![Exemplo de Link para Wireframe](images/wireframe-example.png)
 
 
