@@ -144,7 +144,7 @@ ID	Restrição
 
 
 > **Exemplo de Diagrama (opcional, pode ser em texto)**
-> ![Exemplo de Diagrama de Navegação](images/UserFlow.jpg)
+> ![Exemplo de Diagrama de Navegação](images/UserFlow.png)
 
 # Conclusões
 
