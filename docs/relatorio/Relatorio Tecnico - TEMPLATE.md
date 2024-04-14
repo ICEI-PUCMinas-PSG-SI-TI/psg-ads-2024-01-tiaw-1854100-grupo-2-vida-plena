@@ -137,13 +137,7 @@ ID	Restrição
 
 ## Mapa de navegação
 
-......  COLOQUE AQUI O SEU TEXTO OU DIAGRAMA DE NAVEGAÇÃO .......
-
-> Inclua uma descrição textual ou um diagrama mostrando, sequencialmente, quais ações
-> um usuário deve realizar para utilizar todas as características do seu sistema. 
-
-
-> **Exemplo de Diagrama (opcional, pode ser em texto)**
+> Mapa de Navegação de como o usuário deve realizar para utilizar todas as características do sistema. 
 > ![Exemplo de Diagrama de Navegação](images/UserFlow.png)
 
 # Conclusões
