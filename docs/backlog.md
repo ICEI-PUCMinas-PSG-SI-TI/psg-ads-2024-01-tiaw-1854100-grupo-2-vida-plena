@@ -5,6 +5,7 @@
 | Como um Administrador, eu quero   | Excluir ou Editar Evento        | para poder gerenciar o Feed da pagina, tirando post que deixam de ser relevantes.      |
 | Como um cliente, eu quero      | Visualização de Eventos	       | para poder acompanhar os novos eventos criados por outros usuários da plataforma.   |
 | Como um cliente, eu quero      | Notificações	       | para poder ser notificado de tudo que tá chegando de novo na plataforma, os novos eventos recem criados, um novo post.   |
+| Como um cliente, eu quero      | Agenda	       | para poder me programar com os eventos em que me inscrevi, tendo ele a data, horario e local do evento.   |
 
 
 > Written with [StackEdit](https://stackedit.io/).
