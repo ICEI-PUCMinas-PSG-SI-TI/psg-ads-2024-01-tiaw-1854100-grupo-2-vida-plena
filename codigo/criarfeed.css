@@ -1,0 +1,15 @@
+#btn_Verde{
+    background-color: #05ca74;
+    border-radius: 10px;
+    border-color: white;
+}
+#btn{
+    background-color: white;
+    border-color: #d9d9d9   ;
+    border-radius: 10px;
+    color: black;
+    font: bold;
+}
+.caixa_texto{
+    width: 100%;
+}
