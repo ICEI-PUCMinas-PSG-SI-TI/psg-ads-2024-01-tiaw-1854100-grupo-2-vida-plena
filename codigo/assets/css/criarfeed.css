@@ -10,6 +10,9 @@
     color: black;
     font: bold;
 }
-.caixa_texto{
-    width: 100%;
+.caixa_titulo{
+    width: 90%;
+}
+.caixa_conteudo{
+    width: 90%;
 }
