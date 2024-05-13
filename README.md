@@ -9,7 +9,7 @@ Nosso Projeto será feito com front-end utilizando Html, CSS e Java Script.
 * Domiciano Gabriel Negrini Vieira
 * Lucas Phillipe Freitas Dias
 * Pedro Henrique Freitas Dias
-* Nome completo do aluno 4
+* João Vitor Filgueira Araújo de Castro 
 
 ## Professores responsáveis
 
