@@ -8,8 +8,8 @@ Form.addEventListener("submit", (e) => {
     e.preventDefault();
 
     //Puxando os texto do imput
-    var titulo_caixa = document.getElementById('titulo_caixa').value;
-    var descricao_caixa = document.getElementById('descricao_caixa').value;
+    var titulo = document.getElementById('titulo_caixa').value;
+    var descricao = document.getElementById('descricao_caixa').value;
     //console.log(titulo_caixa);
     //console.log(descricao_caixa);
 
@@ -22,7 +22,8 @@ Form.addEventListener("submit", (e) => {
     //Se não ele faz ser add essa proxima linha de no banco de dados
 
     //Em vez de usar o push (adicionar na após a ultima posição) usei o unshift que add antes da primeira
-    objDados.noticias.unshift({titulo_caixa, descricao_caixa});
+    //O padrão é: id do input : variavel que recebeu seu valor
+    objDados.noticias.unshift({titulo_caixa : titulo, descricao_caixa: descricao});
 
     //Tranformando as info adicionadas na variavel objDados em formato de string e enviando no lugar do banco atual
     localStorage.setItem('db', JSON.stringify(objDados))
