@@ -13,18 +13,21 @@ Form.addEventListener("submit", (e) => {
     //console.log(titulo_caixa);
     //console.log(descricao_caixa);
 
+    objDados = {noticias: []};
+
     //Verificando se existe esse banco
     if(localStorage.hasOwnProperty("db")){
 
         //Se sim, ele faz o objeto "objDados" receber o banco de dados de nome "db" 
         objDados = JSON.parse(localStorage.getItem("db"))
     }
+    console.log(objDados);
     //Se não ele faz ser add essa proxima linha de no banco de dados
 
     //Em vez de usar o push (adicionar na após a ultima posição) usei o unshift que add antes da primeira
     //O padrão é: id do input : variavel que recebeu seu valor
-    objDados.noticias.unshift({titulo_caixa : titulo, descricao_caixa: descricao});
-
+    objDados.noticias.unshift({titulo_caixa: titulo, descricao_caixa: descricao});
+    console.log(objDados);
     //Tranformando as info adicionadas na variavel objDados em formato de string e enviando no lugar do banco atual
     localStorage.setItem('db', JSON.stringify(objDados))
     alert('Salvo')
