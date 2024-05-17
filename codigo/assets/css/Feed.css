@@ -14,7 +14,7 @@
 .textarea{
     width: 95%;
 }
-#botao{
+#botao,#botaocurtir{
     font-size: 25px;
 
 }

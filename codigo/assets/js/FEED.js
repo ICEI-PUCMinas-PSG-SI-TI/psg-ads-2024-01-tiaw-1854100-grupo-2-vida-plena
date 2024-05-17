@@ -61,7 +61,7 @@ function Carregar(){
 
         <div class="comment">
           <input type="checkbox" id="toggle">
-          <i class="bi bi-heart px-3" id="botao"></i>
+          <i onclick="curtir()" class="bi bi-heart px-3" id="botaocurtir"></i>
           <label id="icon" for="toggle"><i class="bi bi-chat" type="button" id="botao" name="abrir"></i></label>
           <i class="bi bi-send text-end px-3" id="botao" ></i>
           <strong id="comentar" class="text-center">Comentar</strong>
