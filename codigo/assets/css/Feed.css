@@ -1,0 +1,21 @@
+/*INICIO BOTAO COMENTARIO*/
+#toggle {
+    display:none;
+}
+
+#comentar {
+    display: none;
+}
+
+#toggle:checked ~ #comentar {
+    display: flex;
+    justify-content: center;
+}
+.textarea{
+    width: 95%;
+}
+#botao{
+    font-size: 25px;
+
+}
+/*FIM BOTAO COMENTARIO*/

@@ -58,6 +58,18 @@ function Carregar(){
 
         strImprimir += `<div class="card" style="width: 100%;">
         <img src="assets/img/Logo-Sem Fundo.png" class="card-img-top" alt="...">
+
+        <div class="comment">
+          <input type="checkbox" id="toggle">
+          <i class="bi bi-heart px-3" id="botao"></i>
+          <label id="icon" for="toggle"><i class="bi bi-chat" type="button" id="botao" name="abrir"></i></label>
+          <i class="bi bi-send text-end px-3" id="botao" ></i>
+          <strong id="comentar" class="text-center">Comentar</strong>
+          <div id="comentar">
+          <textarea class="textarea"></textarea></div>
+        </div>
+
+
         <div class="card-body">
           <p class="card-text"><strong>${noticia.titulo_caixa}</strong></p>
           <p class="card-text">${noticia.descricao_caixa}</p>
