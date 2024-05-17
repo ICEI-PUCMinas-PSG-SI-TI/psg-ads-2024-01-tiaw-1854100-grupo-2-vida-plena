@@ -3,16 +3,23 @@
     display:none;
 }
 
-#comentar {
+#comentar{
     display: none;
+    width: 100%;
+
 }
 
-#toggle:checked ~ #comentar {
+#toggle:checked ~ #comentar{
     display: flex;
     justify-content: center;
+    
 }
-.textarea{
-    width: 95%;
+#comentario{
+    width: 100%;
+    background-color: aqua;
+}
+.comentarr{
+    width: 100%;
 }
 #botao,#botaocurtir{
     font-size: 25px;

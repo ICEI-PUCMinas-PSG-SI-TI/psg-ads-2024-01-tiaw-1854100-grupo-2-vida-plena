@@ -59,24 +59,62 @@ function Carregar(){
         strImprimir += `<div class="card" style="width: 100%;">
         <img src="assets/img/Logo-Sem Fundo.png" class="card-img-top" alt="...">
 
-        <div class="comment">
+        <div class="comment container-fluid">
           <input type="checkbox" id="toggle">
           <i onclick="curtir()" class="bi bi-heart px-3" id="botaocurtir"></i>
           <label id="icon" for="toggle"><i class="bi bi-chat" type="button" id="botao" name="abrir"></i></label>
           <i class="bi bi-send text-end px-3" id="botao" ></i>
-          <strong id="comentar" class="text-center">Comentar</strong>
-          <div id="comentar">
-          <textarea class="textarea"></textarea></div>
+          <div class="container-fluid" id="comentar">
+            <strong id="comentar" class="text-center">Comentar</strong>
+            <div id="comentarios">
+              <textarea class="comentarr" id="comentario"></textarea>
+              <input onclick="comentar()" type="submit"></input>
+            </div>
+          </div>
         </div>
-
 
         <div class="card-body">
           <p class="card-text"><strong>${noticia.titulo_caixa}</strong></p>
           <p class="card-text">${noticia.descricao_caixa}</p>
         </div>
+        <h5><strong class="text-center">Comentarios</strong></h5>
+        <div id="TelaComent"></div>
       </div>`
     }
 
     //Mandando de volta pra div de nome "tela"
     tela.innerHTML = strImprimir;
+}
+
+function comentar(){
+
+  var comentario=document.getElementById('comentario').value;
+  /*console.log(comment);*/
+  var objcoment=[];
+
+  if(localStorage.hasOwnProperty('Comentarios')){
+    objcoment=JSON.parse(localStorage.getItem('Comentarios'))
+  }
+  
+  objcoment.unshift({comentario})
+
+  strImprimir = '';
+  TelaComent=document.getElementById('TelaComent')
+  
+
+  localStorage.setItem('Comentarios',JSON.stringify(objcoment));
+  alert('salvo');
+  for(var i=0; i<objcoment.length; i++){
+      //Variavel que recebe o vetor contido no localStorage
+      let comment = objcoment[i].comentario;
+
+      //Acumulando todas as informações desse vetor em strImprimir
+      //Troquei essa informação por um card pronto do bootstrap
+      //strImprimir += `<p>noticia: ${noticia.titulo_caixa} || assunto: ${noticia.descricao_caixa}</p>`
+
+      strImprimir += `<p class="px-4"><strong>Comentario:</strong> ${comment}</p>`
+      console.log(comment)
+    }
+  
+TelaComent.innerHTML=strImprimir;
 }
