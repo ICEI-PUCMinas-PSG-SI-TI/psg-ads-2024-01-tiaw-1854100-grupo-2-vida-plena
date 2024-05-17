@@ -1,0 +1,51 @@
+
+nav.menulateral{
+    width: 100px;
+    height: 100%;
+    background-color: #f8f9fa;
+    padding: 40px 0 40px 1%;
+    box-shadow: 3px 0 0 #00CC73;
+    overflow: hidden;
+}
+nav.menulateral:hover{
+    width: 300px;
+    transition: 0.4s;
+}
+.btn-expandir{
+    width: 100%;
+    padding: 10px;
+}
+.btn-expandir > i{
+    color: #00CC73;
+    font-size: 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: start;
+    margin-left: 27px;
+}
+ul{
+    height: 100%;
+    list-style-type: none;
+}
+ul li.item-menu{
+    transition: 0.2s;
+}
+ul li.item-menu:hover{
+    background-color: #00CC73
+    ;
+}
+ul li.item-menu a{
+    color: #000000;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 4%;
+    display: flex;
+    align-items: center;
+}
+ul li.item-menu a .txt-link{
+    margin-left: 40px;
+
+}
+ul li.item-menu a .icon > i{
+    font-size: 30px;  
+}
