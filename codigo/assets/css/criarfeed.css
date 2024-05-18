@@ -1,3 +1,4 @@
+
 #btn_Verde{
     background-color: #05ca74;
     border-radius: 10px;
@@ -17,6 +18,7 @@
     width: 90%;
 }
 #barraeconteudo{
-    height: 800px;
+    height: 837px;
+    display: flex;
 }
 
