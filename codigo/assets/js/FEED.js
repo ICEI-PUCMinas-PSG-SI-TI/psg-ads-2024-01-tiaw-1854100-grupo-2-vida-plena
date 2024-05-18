@@ -56,19 +56,20 @@ function Carregar(){
         //Troquei essa informação por um card pronto do bootstrap
         //strImprimir += `<p>noticia: ${noticia.titulo_caixa} || assunto: ${noticia.descricao_caixa}</p>`
 
-        strImprimir += `<div class="card" style="width: 100%;">
+        strImprimir += `<div id="${i}" style="width: 100%;">
         <img src="assets/img/Logo-Sem Fundo.png" class="card-img-top" alt="...">
 
         <div class="comment container-fluid border-top">
-          <input type="checkbox" id="toggle">
-          <i class="bi bi-heart px-3" id="botaocurtir"></i>
-          <label for="toggle"><i class="bi bi-chat" type="button" id="botaocomentar" name="abrir"></i></label>
-          <i class="bi bi-send text-end px-3" id="botaoenviar" ></i>
-          <div class="container-fluid" id="comentar">
+          <input type="checkbox" id="toggle" style="display:none">
+          <i class="bi bi-heart px-3" id="botao"></i>
+          <label for="toggle"><i class="bi bi-chat" type="button" id="botao" name="abrir"></i></label>
+          <i class="bi bi-send text-end px-3" id="botao" ></i>
+          <div class="container-fluid" style="display: none
+          width: 100%;" id="comentar">
             <strong id="comentar" class="text-center">Comentar</strong>
             <div id="comentarios">
-              <textarea class="comentarr" id="comentario"></textarea>
-              <input onclick="comentar()" type="submit"></input>
+              <textarea class="comentarr" id="comentario${i}"></textarea>
+              <input onclick="comentar(${i})" type="submit"></input>
             </div>
           </div>
         </div>
@@ -77,44 +78,49 @@ function Carregar(){
           <p class="card-text"><strong>${noticia.titulo_caixa}</strong></p>
           <p class="card-text">${noticia.descricao_caixa}</p>
         </div>
-        <h5><strong class="text-center">Comentarios</strong></h5>
-        <div id="TelaComent"></div>
+        <h5><strong  class="text-center">Comentarios</strong></h5>
+        <div id="TelaComent${i}"></div>
       </div>`
     }
 
     //Mandando de volta pra div de nome "tela"
     tela.innerHTML = strImprimir;
+    comentar();
 }
 
-function comentar(){
+function comentar(i){
 
-  var comentario=document.getElementById('comentario').value;
+  var comentario=document.getElementById('comentario'+i).value;
   /*console.log(comment);*/
-  var objcoment=[];
+    var comentarioPorPost={};
 
-  if(localStorage.hasOwnProperty('Comentarios')){
-    objcoment=JSON.parse(localStorage.getItem('Comentarios'))
+  if(localStorage.hasOwnProperty('ComentarioPorPost')){
+    comentarioPorPost=JSON.parse(localStorage.getItem('ComentarioPorPost'))
   }
-  
-  objcoment.unshift({comentario})
 
-  strImprimir = '';
-  TelaComent=document.getElementById('TelaComent')
+  if(!comentarioPorPost[i]){
+    comentarioPorPost[i]= [];
+  }
+
+  comentarioPorPost[i].unshift({comentario})
+
+  var strImprimir = '';
+  var TelaComent=document.getElementById('TelaComent'+i)
   
 
-  localStorage.setItem('Comentarios',JSON.stringify(objcoment));
+  localStorage.setItem('ComentarioPorPost',JSON.stringify(comentarioPorPost));
   alert('salvo');
-  for(var i=0; i<objcoment.length; i++){
+  for(var j=0; j<comentarioPorPost[i].length; j++){
       //Variavel que recebe o vetor contido no localStorage
-      let comment = objcoment[i].comentario;
+      let comment = comentarioPorPost[i][j];
 
       //Acumulando todas as informações desse vetor em strImprimir
       //Troquei essa informação por um card pronto do bootstrap
       //strImprimir += `<p>noticia: ${noticia.titulo_caixa} || assunto: ${noticia.descricao_caixa}</p>`
 
-      strImprimir += `<p class="px-4"><strong>Comentario:</strong> ${comment}</p>`
+      strImprimir += `<p class="px-4"><strong>Comentario:</strong> ${comment.comentario}</p>`
       console.log(comment)
     }
   
-TelaComent.innerHTML=strImprimir;
+return TelaComent.innerHTML=strImprimir;
 }
