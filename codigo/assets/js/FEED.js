@@ -56,16 +56,19 @@ function Carregar(){
         //Troquei essa informação por um card pronto do bootstrap
         //strImprimir += `<p>noticia: ${noticia.titulo_caixa} || assunto: ${noticia.descricao_caixa}</p>`
 
-        strImprimir += `<div id="${i}" style="width: 100%;">
+        strImprimir += `<div class="p-1 shadow m-2" id="${i}" style="width: 100%;">
         <img src="https://source.unsplash.com/random/800x600/?family" class="card-img-top" alt="...">
 
         <div class="comment container-fluid border-top">
-          <input type="checkbox" id="toggle" style="display:none">
           <i class="bi bi-heart px-3" id="botao"></i>
-          <label for="toggle"><i class="bi bi-chat" type="button" id="botao" name="abrir"></i></label>
+          <input type="checkbox" id="toggle${i}">
+          <label for="toggle${i}"><i class="bi bi-chat" type="button" id="botao" style="#toggle:checked ~ #comentar{
+            display: block;
+            justify-content: center;
+            
+        }" name="abrir"></i></label>
           <i class="bi bi-send text-end px-3" id="botao" ></i>
-          <div class="container-fluid" style="display: none
-          width: 100%;" id="comentar">
+          <div id="comentar">
             <strong id="comentar" class="text-center">Comentar</strong>
             <div id="comentarios">
               <textarea class="comentarr" id="comentario${i}"></textarea>
@@ -75,10 +78,10 @@ function Carregar(){
         </div>
 
         <div class="card-body">
-          <p class="card-text"><strong>${noticia.titulo_caixa}</strong></p>
-          <p class="card-text">${noticia.descricao_caixa}</p>
+          <p class="card-text text-center"><strong>${noticia.titulo_caixa}</strong></p>
+          <p class="card-text p-3">${noticia.descricao_caixa}</p>
         </div>
-        <h5><strong  class="text-center">Comentarios</strong></h5>
+        <h5 class="text-center" ><strong>Comentarios</strong></h5>
         <div id="TelaComent${i}"></div>
       </div>`
     }

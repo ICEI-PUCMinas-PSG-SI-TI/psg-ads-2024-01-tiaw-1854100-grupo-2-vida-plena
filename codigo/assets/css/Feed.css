@@ -1,6 +1,6 @@
 /*INICIO BOTAO COMENTARIO*/
 #toggle {
-    display:none;
+    /*display:none;*/
 }
 
 #comentar{
@@ -19,10 +19,14 @@
     background-color: aqua;
 }
 .comentarr{
+    display: flex;
     width: 100%;
 }
 #botao,#botaocurtir{
     font-size: 25px;
 
+}
+#comentarios{
+    width: 100%;
 }
 /*FIM BOTAO COMENTARIO*/
