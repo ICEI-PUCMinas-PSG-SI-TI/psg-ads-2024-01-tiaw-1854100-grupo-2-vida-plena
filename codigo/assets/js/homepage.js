@@ -31,18 +31,18 @@ function shuffleArray (array) {
 }
 
 function ReadCardInfo () {
-    const dados = localStorage.getItem('objDados');
+    const dados = localStorage.getItem('db');
     const noticias = JSON.parse(dados);
 
     if(noticias.length > 0) {
         const shuffleNoticias = shuffleArray(noticias);
 
         if(shuffleNoticias[0]) {
-            createCardInfo(firstCard, shuffleNoticias[0].noticia, shuffleNoticias[0].descricao);
+            createCardInfo(firstCard, shuffleNoticias[0].titulo, shuffleNoticias[0].descricao);
         }
 
         if(shuffleNoticias[1]) {
-            createCardInfo(secondCard, shuffleNoticias[1].noticia, shuffleNoticias[1].descricao);
+            createCardInfo(secondCard, shuffleNoticias[1].titulo, shuffleNoticias[1].descricao);
         }
     }
     
