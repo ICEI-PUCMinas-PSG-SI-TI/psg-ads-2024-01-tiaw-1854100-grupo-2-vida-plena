@@ -38,11 +38,11 @@ function ReadCardInfo () {
         const shuffleNoticias = shuffleArray(noticias);
 
         if(shuffleNoticias[0]) {
-            createCardInfo(firstCard, shuffleNoticias[0].titulo, shuffleNoticias[0].descricao);
+            createCardInfo(firstCard, shuffleNoticias[0].titulo_caixa, shuffleNoticias[0].descricao_caixa);
         }
 
         if(shuffleNoticias[1]) {
-            createCardInfo(secondCard, shuffleNoticias[1].titulo, shuffleNoticias[1].descricao);
+            createCardInfo(secondCard, shuffleNoticias[1].titulo_caixa, shuffleNoticias[1].descricao_caixa);
         }
     }
     
