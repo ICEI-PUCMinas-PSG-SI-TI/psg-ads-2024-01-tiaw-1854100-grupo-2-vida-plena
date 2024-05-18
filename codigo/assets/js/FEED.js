@@ -59,11 +59,11 @@ function Carregar(){
         strImprimir += `<div class="card" style="width: 100%;">
         <img src="assets/img/Logo-Sem Fundo.png" class="card-img-top" alt="...">
 
-        <div class="comment container-fluid">
+        <div class="comment container-fluid border-top">
           <input type="checkbox" id="toggle">
-          <i onclick="curtir()" class="bi bi-heart px-3" id="botaocurtir"></i>
-          <label id="icon" for="toggle"><i class="bi bi-chat" type="button" id="botao" name="abrir"></i></label>
-          <i class="bi bi-send text-end px-3" id="botao" ></i>
+          <i class="bi bi-heart px-3" id="botaocurtir"></i>
+          <label for="toggle"><i class="bi bi-chat" type="button" id="botaocomentar" name="abrir"></i></label>
+          <i class="bi bi-send text-end px-3" id="botaoenviar" ></i>
           <div class="container-fluid" id="comentar">
             <strong id="comentar" class="text-center">Comentar</strong>
             <div id="comentarios">
