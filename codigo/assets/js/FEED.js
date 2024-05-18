@@ -57,7 +57,7 @@ function Carregar(){
         //strImprimir += `<p>noticia: ${noticia.titulo_caixa} || assunto: ${noticia.descricao_caixa}</p>`
 
         strImprimir += `<div id="${i}" style="width: 100%;">
-        <img src="assets/img/Logo-Sem Fundo.png" class="card-img-top" alt="...">
+        <img src="https://source.unsplash.com/random/800x600/?family" class="card-img-top" alt="...">
 
         <div class="comment container-fluid border-top">
           <input type="checkbox" id="toggle" style="display:none">
