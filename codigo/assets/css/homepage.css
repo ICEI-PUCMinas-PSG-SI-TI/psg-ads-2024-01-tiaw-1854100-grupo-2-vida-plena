@@ -7,18 +7,77 @@
 }
 
 body {
-    font-family: "MontSerrat", sans-serif;
+    font-family: "MontSerrat", sans-serif !important;
 }
 
 img {
     display: block;
 }
 
+header {
+    position: relative; 
+    z-index: 1100; 
+}
+
+
+nav.menulateral{
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100%;
+    background-color: #f8f9fa;
+    padding: 130px 0 0px !important ;
+    box-shadow: 3px 0 0 #00CC73;
+    overflow: hidden;
+}
+nav.menulateral:hover{
+    width: 290px;
+    transition: 0.4s;
+    height: 100%;
+}
+.btn-expandir{
+    width: 100%;
+    padding: 10px;
+}
+.btn-expandir > i{
+    color: #00CC73;
+    font-size: 30px;
+    cursor: pointer;
+    display: flex;
+    margin-left: 27px;
+}
+ul{
+    padding: 0;
+    list-style-type: none;
+}
+ul li.item-menu{
+    transition: 0.2s;
+}
+ul li.item-menu:hover{
+    background-color: #00CC73;
+}
+ul li.item-menu a{
+    color: #000000;
+    text-decoration: none;
+    font-size: 20px;
+    display: flex;
+}
+ul li.item-menu a .txt-link{
+    margin-left: 60px;
+}
+ul li.item-menu a .icon > i{
+    font-size: 30px; 
+    display: flex;
+    margin-left: 22px;
+}
 
 
 main {
-    display: flex;
-    flex-wrap: wrap;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center;
+
 
 }
 
@@ -26,8 +85,8 @@ main {
     max-width: 1280px;
     margin: 2.5rem;
     width: 100%;
-    margin-left: 3.5rem;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
     align-items: start;
@@ -47,9 +106,10 @@ main {
 .secao-2 {
     background-color: #00CC73;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     align-items: center;
-    width: 100%;
+    width: 100% !important;
 }
 
 
@@ -59,7 +119,7 @@ main {
     margin: 2.5rem;
     margin-left: 3.5rem;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap !important;
     flex-direction: column;
     align-items: start;
 }
@@ -133,6 +193,7 @@ main {
     margin-top: 6rem;
     margin-bottom: 20px;
     display: flex;
+    align-items: center;
     flex-direction: column;
 }
 
@@ -151,14 +212,16 @@ main {
     margin-left: 3.5rem;
     width: 100%;
     height: 100%;
-    display: flex;
-    flex-wrap: wrap;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    overflow: hidden;
+    justify-content: center;
     flex-direction: row;
     gap: 5rem;
 }
 
 .card {
-    background-color: #00CC73;
+    background-color: #00CC73 !important;
     width: 24rem;
     color: #ffffff;
     border-radius: 0;
@@ -216,8 +279,8 @@ main {
 @media screen and (max-width: 992px) {
     
     .img-list {
-        display: flex;
-        flex-direction: column;
+        display: flex !important;
+        flex-direction: column !important;
     }
 
     .agenda-list ul li {
@@ -228,9 +291,10 @@ main {
         margin-left: 0;
     }
 
+
     .secao3-container {
-        display: flex;
-        margin-left: 0;
+        display: flex ;
+        margin-left: 0 !important;
         flex-wrap: wrap;
         justify-content: center;
     }
@@ -263,4 +327,24 @@ main {
         width: 100%;
     }
   
+    nav.menulateral {
+        width: 80px; /* Reduza a largura da sidebar */
+    }
+
+    nav.menulateral:hover {
+        width: 200px; /* Largura expandida ao passar o mouse */
+    }
+
+    .btn-expandir > i {
+        margin-left: 5px; /* Ajuste o ícone de expansão para alinhar */
+    }
 }
+
+    @media screen and (max-width: 768px) {
+        nav.menulateral {
+            display: none;
+        }
+
+    }
+
+
