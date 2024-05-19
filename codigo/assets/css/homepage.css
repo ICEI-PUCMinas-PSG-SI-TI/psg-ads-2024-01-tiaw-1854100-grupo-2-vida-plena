@@ -178,6 +178,10 @@ main {
 }
 
 .agenda-list {
+    font-size: 1.5rem;
+}
+
+.agenda-list {
     text-align: start;
     align-content: center;
 }
@@ -352,6 +356,10 @@ footer {
 
         main,section,footer{
             padding: 0;
+        }
+
+        .agenda-list {
+            font-size: 0.9rem;
         }
 
         footer {
