@@ -72,6 +72,9 @@ ul li.item-menu a .icon > i{
     margin-left: 22px;
 }
 
+main,section,footer{
+    padding-left: 100px;
+}
 
 main {
     display: flex !important;
@@ -274,7 +277,9 @@ main {
     width: 100%;
 }
 
-
+footer {
+    margin-left: 50px ;
+}
 
 @media screen and (max-width: 992px) {
     
@@ -345,6 +350,13 @@ main {
             display: none;
         }
 
+        main,section,footer{
+            padding: 0;
+        }
+
+        footer {
+            margin: 0;
+        }
     }
 
 
