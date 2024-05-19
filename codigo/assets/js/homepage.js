@@ -1,3 +1,10 @@
+const feedBtn = document.getElementById("feed-btn");
+feedBtn.addEventListener('click', function() {
+    window.location.href = "Feed.html";
+})
+
+
+
 const firstCard = document.getElementById('first-card');
 const secondCard = document.getElementById('second-card');
 
@@ -48,3 +55,5 @@ function ReadCardInfo () {
     
 }
 ReadCardInfo();
+
+
