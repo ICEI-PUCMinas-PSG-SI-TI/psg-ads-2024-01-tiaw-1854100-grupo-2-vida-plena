@@ -39,7 +39,7 @@ function shuffleArray (array) {
 
 function ReadCardInfo () {
     const dados = localStorage.getItem('db');
-    const noticias = JSON.parse(dados);
+    const noticias = JSON.parse(dados).noticias;
 
     if(noticias.length > 0) {
         const shuffleNoticias = shuffleArray(noticias);
@@ -52,7 +52,6 @@ function ReadCardInfo () {
             createCardInfo(secondCard, shuffleNoticias[1].titulo_caixa, shuffleNoticias[1].descricao_caixa);
         }
     }
-    
 }
 ReadCardInfo();
 
