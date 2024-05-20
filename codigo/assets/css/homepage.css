@@ -230,7 +230,7 @@ main {
 .card {
     background-color: #00CC73 !important;
     width: 24rem;
-    color: #ffffff;
+    color: #ffffff !important;
     border-radius: 0;
     border: 2px solid black;
     padding: 15px;
