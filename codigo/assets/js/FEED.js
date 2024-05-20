@@ -59,10 +59,10 @@ function Carregar(){
         strImprimir += `<div class="p-1 shadow m-2" id="${i}" style="width: 100%;">
         <img src="https://source.unsplash.com/random/800x600/?family" class="card-img-top" alt="...">
 
-        <div container-fluid border-top">
-          <i type="button" onclick="btncurtir(${i})" class="bi bi-heart px-3" id="botoes"></i>
-          <i type="button" onclick="abrircomentario(${i})" class="bi bi-chat" id="botoes"></i>
-          <i type="button" class="bi bi-send text-end px-3" id="botoes"></i>
+        <div class="border-top">
+          <i type="button" style="color:black;" onclick="btncurtir(${i})" class="bi bi-heart-fill mx-3" id="botaocurtir${i}"></i>
+          <i type="button" onclick="abrircomentario(${i})" class="bi bi-chat mx-3" id="botoes"></i>
+          <i type="button" class="bi bi-send text-end mx-3" id="botoes"></i>
           <div id="comentar${i}" style="display:none;" >
             <strong id="comentar" class="text-center">Comentar</strong>
             <div id="comentarios">
@@ -76,7 +76,7 @@ function Carregar(){
           <p class="card-text text-center"><strong>${noticia.titulo_caixa}</strong></p>
           <p class="card-text p-3">${noticia.descricao_caixa}</p>
         </div>
-        <h5 class="text-center" ><strong>Comentarios</strong></h5>
+        <h5 class="text-center"><strong>Comentarios</strong></h5>
         <div id="TelaComent${i}"></div>
       </div>`
     }
@@ -85,7 +85,16 @@ function Carregar(){
     tela.innerHTML = strImprimir;
     comentar();
 }
-
+ 
+//função para mudar a cor do botão curtir
+function btncurtir(i){
+  var botao=document.getElementById("botaocurtir"+i);
+  if(botao.style.color==="black"){
+    botao.style.color="red";
+  } else {
+    botao.style.color="black";
+  }
+}//--FIM--
 
 // - INICIO - Function para abrir com o botão de Comentar 
 function abrircomentario(i){
@@ -100,6 +109,7 @@ function abrircomentario(i){
 }
 // - FIM - Function para abrir com o botão de Comentar 
 
+//função que recebe o comentario e leva para o LocalStorage
 function comentar(i){
 
   var comentario=document.getElementById('comentario'+i).value;
@@ -135,11 +145,4 @@ function comentar(i){
     }
   
 return TelaComent.innerHTML=strImprimir;
-}
-
-//Função para retornar ao feed após publicação
-function retornaraoFeed(event){
-  event.preventDefault();
-
-  location.href = "Feed.html";
 }
