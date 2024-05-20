@@ -123,3 +123,10 @@ function comentar(i){
   
 return TelaComent.innerHTML=strImprimir;
 }
+
+//Função para retornar ao feed após publicação
+function retornaraoFeed(event){
+  event.preventDefault();
+
+  location.href = "Feed.html";
+}
