@@ -61,12 +61,8 @@ function Carregar(){
 
         <div class="comment container-fluid border-top">
           <i class="bi bi-heart px-3" id="botao"></i>
-          <input type="checkbox" id="toggle${i}">
-          <label for="toggle${i}"><i class="bi bi-chat" type="button" id="botao" style="#toggle:checked ~ #comentar{
-            display: block;
-            justify-content: center;
-            
-        }" name="abrir"></i></label>
+          <input type="checkbox" id="toggle">
+          <label for="toggle"><i class="bi bi-chat" type="button" id="botao" name="abrir"></i></label>
           <i class="bi bi-send text-end px-3" id="botao" ></i>
           <div id="comentar">
             <strong id="comentar" class="text-center">Comentar</strong>
@@ -126,4 +122,11 @@ function comentar(i){
     }
   
 return TelaComent.innerHTML=strImprimir;
+}
+
+//Função para retornar ao feed após publicação
+function retornaraoFeed(event){
+  event.preventDefault();
+
+  location.href = "Feed.html";
 }
