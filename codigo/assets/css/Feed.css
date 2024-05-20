@@ -1,28 +1,5 @@
 /*INICIO BOTAO COMENTARIO*/
-#toggle {
-    /*display:none;*/
-}
-
-#comentar{
-    display: none;
-    width: 100%;
-
-}
-
-#toggle:checked ~ #comentar{
-    display: flex;
-    justify-content: center;
-    
-}
-#comentario{
-    width: 100%;
-    background-color: aqua;
-}
-.comentarr{
-    display: flex;
-    width: 100%;
-}
-#botao,#botaocurtir{
+#botoes{
     font-size: 30px;
 
 }

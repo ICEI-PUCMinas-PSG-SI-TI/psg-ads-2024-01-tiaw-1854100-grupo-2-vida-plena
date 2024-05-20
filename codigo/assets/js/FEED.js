@@ -59,15 +59,14 @@ function Carregar(){
         strImprimir += `<div class="p-1 shadow m-2" id="${i}" style="width: 100%;">
         <img src="https://source.unsplash.com/random/800x600/?family" class="card-img-top" alt="...">
 
-        <div class="comment container-fluid border-top">
-          <i class="bi bi-heart px-3" id="botao"></i>
-          <input type="checkbox" id="toggle">
-          <label for="toggle"><i class="bi bi-chat" type="button" id="botao" name="abrir"></i></label>
-          <i class="bi bi-send text-end px-3" id="botao" ></i>
-          <div id="comentar">
+        <div container-fluid border-top">
+          <i type="button" onclick="btncurtir(${i})" class="bi bi-heart px-3" id="botoes"></i>
+          <i type="button" onclick="abrircomentario(${i})" class="bi bi-chat" id="botoes"></i>
+          <i type="button" class="bi bi-send text-end px-3" id="botoes"></i>
+          <div id="comentar${i}" style="display:none;" >
             <strong id="comentar" class="text-center">Comentar</strong>
             <div id="comentarios">
-              <textarea class="comentarr" id="comentario${i}"></textarea>
+              <textarea class="textarea" style="width:100%;" id="comentario${i}"></textarea>
               <input onclick="comentar(${i})" type="submit"></input>
             </div>
           </div>
@@ -86,6 +85,20 @@ function Carregar(){
     tela.innerHTML = strImprimir;
     comentar();
 }
+
+
+// - INICIO - Function para abrir com o botão de Comentar 
+function abrircomentario(i){
+  var elemento = document.getElementById("comentar"+i);
+  if (elemento.style.display === "none") {
+      elemento.style.display = "block"; // Mostra o elemento
+  } else {
+      elemento.style.display = "none"; // Oculta o elemento
+  }
+
+
+}
+// - FIM - Function para abrir com o botão de Comentar 
 
 function comentar(i){
 
