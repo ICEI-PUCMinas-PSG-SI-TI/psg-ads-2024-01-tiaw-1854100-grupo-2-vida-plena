@@ -51,6 +51,7 @@ function Carregar(){
     for(var i=0; i<objDados.noticias.length; i++){
         //Variavel que recebe o vetor contido no localStorage
         let noticia = objDados.noticias[i];
+        console.log(noticia)
 
         //Acumulando todas as informações desse vetor em strImprimir
         //Troquei essa informação por um card pronto do bootstrap
@@ -60,7 +61,7 @@ function Carregar(){
         <img src="https://source.unsplash.com/random/800x600/?family" class="card-img-top" alt="...">
 
         <div class="border-top">
-          <i type="button" style="color:black;" onclick="btncurtir(${i})" class="bi bi-heart-fill mx-3" id="botaocurtir${i}"></i>
+          <i type="button" style="color:${noticia.like};" onclick="btncurtir(${i})" class="bi bi-heart-fill mx-3" id="botaocurtir${i}"></i>
           <i type="button" onclick="abrircomentario(${i})" class="bi bi-chat mx-3" id="botoes"></i>
           <i type="button" class="bi bi-send text-end mx-3" id="botoes"></i>
           <div id="comentar${i}" style="display:none;" >
@@ -88,12 +89,27 @@ function Carregar(){
  
 //função para mudar a cor do botão curtir
 function btncurtir(i){
+  //puxei o Local storege e atribui a variavel objDados
+  objDados=JSON.parse(localStorage.getItem("db"))
+
+  //crie uma variavel para a cor do botao, inicialmente preta
+  var curtido='black';
+
+  //puxei o id do botao Like
   var botao=document.getElementById("botaocurtir"+i);
+
+  //fiz uma verificação da cor do botao. Se estiver preto vai ficar vermelho, e visse versa. Por final grava no Local storage a cor do botão para quando reiniciar a page as infos do botao estarem estarem salvas.
   if(botao.style.color==="black"){
     botao.style.color="red";
+    curtido='red';
+    objDados.noticias[i].like=curtido;
+    localStorage.setItem('db',JSON.stringify(objDados));
   } else {
     botao.style.color="black";
+    objDados.noticias[i].like=curtido;
+    localStorage.setItem('db',JSON.stringify(objDados));
   }
+  
 }//--FIM--
 
 // - INICIO - Function para abrir com o botão de Comentar 
