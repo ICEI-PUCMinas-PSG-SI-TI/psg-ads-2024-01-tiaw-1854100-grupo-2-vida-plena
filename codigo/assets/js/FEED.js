@@ -10,8 +10,6 @@ Form.addEventListener("submit", (e) => {
     //Puxando os texto do imput
     var titulo = document.getElementById('titulo_caixa').value;
     var descricao = document.getElementById('descricao_caixa').value;
-    //console.log(titulo_caixa);
-    //console.log(descricao_caixa);
 
     objDados = {noticias: []};
 
@@ -21,13 +19,12 @@ Form.addEventListener("submit", (e) => {
         //Se sim, ele faz o objeto "objDados" receber o banco de dados de nome "db" 
         objDados = JSON.parse(localStorage.getItem("db"))
     }
-    console.log(objDados);
     //Se não ele faz ser add essa proxima linha de no banco de dados
 
     //Em vez de usar o push (adicionar na após a ultima posição) usei o unshift que add antes da primeira
     //O padrão é: id do input : variavel que recebeu seu valor
     objDados.noticias.unshift({titulo_caixa: titulo, descricao_caixa: descricao});
-    console.log(objDados);
+
     //Tranformando as info adicionadas na variavel objDados em formato de string e enviando no lugar do banco atual
     localStorage.setItem('db', JSON.stringify(objDados))
     alert('Salvo')
@@ -39,7 +36,6 @@ Form.addEventListener("submit", (e) => {
 function Carregar(){
     //Puxo o atual localStorage, tem que ter isso aqui, e dentro do for
     var objDados = JSON.parse(localStorage.getItem("db"))
-    //console.log(objDados)
 
     //Recupero a informação que tem na tela
     let tela = document.getElementById('tela')
@@ -50,12 +46,14 @@ function Carregar(){
     //For para colocar todas as informações, como titulo e descrição em strImprimir
     for(var i=0; i<objDados.noticias.length; i++){
         //Variavel que recebe o vetor contido no localStorage
-        let noticia = objDados.noticias[i];
-        console.log(noticia)
+        let noticia = objDados.noticias[i]; 
+
+        let comentarios = LerComentarios(i);
+
+        console.log(comentarios)
 
         //Acumulando todas as informações desse vetor em strImprimir
         //Troquei essa informação por um card pronto do bootstrap
-        //strImprimir += `<p>noticia: ${noticia.titulo_caixa} || assunto: ${noticia.descricao_caixa}</p>`
 
         strImprimir += `<div class="p-1 shadow m-2" id="${i}" style="width: 100%;">
         <img src="https://source.unsplash.com/random/800x600/?family" class="card-img-top" alt="...">
@@ -78,16 +76,15 @@ function Carregar(){
           <p class="card-text p-3">${noticia.descricao_caixa}</p>
         </div>
         <h5 class="text-center"><strong>Comentarios</strong></h5>
-        <div id="TelaComent${i}"></div>
+        <div id="TelaComent${i}">${comentarios}</div>
       </div>`
     }
 
     //Mandando de volta pra div de nome "tela"
     tela.innerHTML = strImprimir;
-    comentar();
 }
  
-//função para mudar a cor do botão curtir
+//função para mudar a cor do botão curtir --INICIO--
 function btncurtir(i){
   //puxei o Local storege e atribui a variavel objDados
   objDados=JSON.parse(localStorage.getItem("db"))
@@ -121,15 +118,14 @@ function abrircomentario(i){
       elemento.style.display = "none"; // Oculta o elemento
   }
 
-
-}
-// - FIM - Function para abrir com o botão de Comentar 
+}// - FIM - Function para abrir com o botão de Comentar
+ 
 
 //função que recebe o comentario e leva para o LocalStorage
 function comentar(i){
-
+/*
   var comentario=document.getElementById('comentario'+i).value;
-  /*console.log(comment);*/
+
     var comentarioPorPost={};
 
   if(localStorage.hasOwnProperty('ComentarioPorPost')){
@@ -157,8 +153,50 @@ function comentar(i){
       //strImprimir += `<p>noticia: ${noticia.titulo_caixa} || assunto: ${noticia.descricao_caixa}</p>`
 
       strImprimir += `<p class="px-4"><strong>Comentario:</strong> ${comment.comentario}</p>`
-      console.log(comment)
     }
   
-return TelaComent.innerHTML=strImprimir;
+return TelaComent.innerHTML=strImprimir;*/
+
+
+var comentario=document.getElementById('comentario'+i).value;
+if(localStorage.hasOwnProperty('db')){
+  objDados =JSON.parse(localStorage.getItem('db'))
 }
+if(!objDados.noticias[i].comentarios){
+  objDados.noticias[i].comentarios = new Array();
+  objDados.noticias[i].comentarios.unshift(comentario);
+
+  localStorage.setItem('db',JSON.stringify(objDados));
+  alert('Comentário salvo, pela primeira vez!')
+}
+else{
+  objDados.noticias[i].comentarios.unshift(comentario);
+
+  localStorage.setItem('db',JSON.stringify(objDados));
+  alert('Comentário salvo! Já existo')
+}
+ImprimirComentarios(i, objDados);
+
+}
+
+//----IMPRIMIR OS COMENTÁRIOS ----INICIO
+function ImprimirComentarios(pos, objDados){
+  var strComentarios = '';
+  var TelaComent=document.getElementById('TelaComent'+pos)
+
+  for(var i = 0;i < objDados.noticias[pos].comentarios.length; i++){
+    let comentario = objDados.noticias[pos].comentarios[i];
+
+    strComentarios += `<p>${comentario}</p>`;
+
+  }
+
+  return TelaComent.innerHTML=strComentarios;
+}
+function LerComentarios(i){
+  objDados = JSON.parse(localStorage.getItem('db'))
+  objComentarios = objDados.noticias[i].comentarios;
+
+  return objComentarios;
+  
+}//--FIM
