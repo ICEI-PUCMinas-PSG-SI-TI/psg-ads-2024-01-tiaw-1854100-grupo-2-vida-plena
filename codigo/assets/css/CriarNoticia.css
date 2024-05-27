@@ -1,0 +1,14 @@
+#Formulario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    width: 100%;
+}
+form{
+    width: 70%;
+}
+#Formulario>form>input,textarea{
+    width: 100%;
+
+}
