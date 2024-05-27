@@ -7,20 +7,28 @@
     <!--INICIO - Script do JQuery e Função para inserir o cabeçalho-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script> 
+    <link rel="stylesheet" href="assets/css/login.css">
     <script> 
-        $(function(){
-            $("#tagCabecalho").load("cabecalho.html"); 
-            $("#tagMenuLateral").load("menulateral.html");
+        $(function(){ 
             $("#tagFooter").load("footer.html");  
         });
     </script>
     <!--FIM-->
 </head>
 <body>
-     <!--Chamando o cabeçalho-->
-     <div id="tagCabecalho"></div>
-
-     
+    <section class="login-pg">
+        <form class="form">
+            <img src="assets/img/Logo-Sem Fundo.png" alt=""> <br>
+            <label for="">User: </label> <br>
+            <input type="email" name="email" id="email"> <br>
+            <label for="">Senha: </label> <br>
+            <input type="password" name="senha" id="senha">
+            <div class="buttons">
+                <a href="">Registrar-se</a>
+                <button  type="submit">Entrar</button>
+            </div>
+        </form>
+    </section>
      <div id="tagFooter"></div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
