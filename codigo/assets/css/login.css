@@ -6,6 +6,7 @@
 #LeR {
     margin-top: 15px;
     display: flex;
+    padding: 0;
 }
 
 .login-pg {

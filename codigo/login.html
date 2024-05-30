@@ -23,22 +23,22 @@
             <form id="form-login" class="form">
                 <img src="assets/img/Logo-Sem Fundo.png" alt=""> <br>
                 <label for="">Email: </label> <br>
-                <input type="email" name="email" id="email"> <br>
+                <input type="email" name="email" id="email-log"> <br>
                 <label for="">Senha: </label> <br>
-                <input type="password" name="senha" id="senha">
+                <input type="password" name="senha" id="senha-log">
                 <button class="button" type="submit">Entrar</button>
             </form>
         </section>
         <section class="register-pg">
-            <form id="forms" class="form">
+            <form id="form-register" class="form">
                 <h3>Registre-se</h3> <br>
                 <label for="">Email: </label> <br>
-                <input type="email" name="email" id="email"> <br>
+                <input type="email" name="email" id="email-reg"> <br>
                 <label for="">Digite uma senha: </label> <br>
-                <input type="password" name="senha" id="senha">
+                <input type="password" name="senha" id="senha-reg">
                 <label for="">digite novamente a senha: </label> <br>
-                <input type="password" name="senha" id="senha">
-                <button class="button-reg" type="submit">Registrar</button>
+                <input type="password" name="senha" id="senha-reg2">
+                <input class="button-reg" type="submit" value="Registrar"></input>
             </form>
         </section>
     </div>
@@ -48,13 +48,83 @@
         crossorigin="anonymous"></script>
 
     <script>
-        let form = document.getElementById('form-register');
-        form.addEventListener("submit", (e) => {
+        var formL = document.getElementById('form-login');
+        formL.addEventListener('submit', (e) => {
             e.preventDefault();
 
-            let email = document.getElementById('email').value;
-            let senha = document.getElementById('senha').value;
+            let email = document.getElementById('email-log').value;
+            let senha = document.getElementById('senha-log').value;
+
+            let objDados = LerDados();
+            console.log(objDados);
+            
+            if(objDados == 0){
+                alert('Usuário não existe!')
+            }
+            else{
+                for(let i = 0; i < objDados.usuarios.length; i++){
+                    let usuario = objDados.usuarios[i];
+                    console.log(usuario);
+
+                    if(usuario.email == email && usuario.senha == senha){
+                        alert('Encontrei')
+
+                        location.href = "homepage.html";
+                    }
+                }
+            }
         })
+
+        var formR = document.getElementById('form-register');
+        formR.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            let email = document.getElementById('email-reg').value;
+            let senha = document.getElementById('senha-reg').value;
+            let senha2 = document.getElementById('senha-reg2').value;
+
+            if (senha != senha2) {
+                alert('Senhas não conferem!')
+            }
+            else {
+                let usuario = new NovoUsuario(email, senha);
+
+                SalvaUsuario(usuario);
+            }
+
+        })
+
+        function NovoUsuario(email, senha) {
+            this.email = email;
+            this.senha = senha;
+        }
+
+        function SalvaUsuario(usuario) {
+            let objDados = { usuarios: [] };
+            if (localStorage.hasOwnProperty("usuarios")) {
+
+                //Se sim, ele faz o objeto "objDados" receber o banco de dados de nome "db" 
+                objDados = JSON.parse(localStorage.getItem("usuarios"))
+            }
+
+            objDados.usuarios.unshift(usuario);
+
+            localStorage.setItem('usuarios', JSON.stringify(objDados));
+            alert('Registrado!')
+        }
+
+        function LerDados() {
+            if (localStorage.hasOwnProperty("usuarios")) {
+
+                //Se sim, ele faz o objeto "objDados" receber o banco de dados de nome "db" 
+                objDados = JSON.parse(localStorage.getItem("usuarios"))
+
+                return objDados
+            }
+            else{
+                return 0;
+            }
+        }
     </script>
 </body>
 
