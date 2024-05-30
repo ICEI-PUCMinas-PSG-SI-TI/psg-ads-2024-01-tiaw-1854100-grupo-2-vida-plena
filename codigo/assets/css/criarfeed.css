@@ -1,24 +1,26 @@
-
-#btn_Verde{
+#btn_Verde {
     background-color: #05ca74;
     border-radius: 10px;
     border-color: white;
 }
-#btn{
+
+#btn {
     background-color: white;
-    border-color: #d9d9d9   ;
+    border-color: #d9d9d9;
     border-radius: 10px;
     color: black;
     font: bold;
 }
-.caixa_titulo{
+
+.caixa_titulo {
     width: 90%;
 }
-.caixa_conteudo{
+
+.caixa_conteudo {
     width: 90%;
 }
-#barraeconteudo{
+
+#barraeconteudo {
     height: 837px;
     display: flex;
 }
-

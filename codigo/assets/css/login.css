@@ -1,23 +1,69 @@
-*{
+* {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 15px;
 }
-.login-pg{
+
+#LeR {
+    margin-top: 15px;
+    display: flex;
+}
+
+.login-pg {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 610px;
+    height: 80vh;
     flex-wrap: wrap;
+    width: 100%;
 }
-input{
+
+.register-pg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    flex-wrap: wrap;
+    background-color: #05ca74;
+    width: 100%;
+    color: white;
+}
+
+input {
+    height: 40px;
     width: 100%;
     border-radius: 7px;
+    border-style: solid;
+    margin-bottom: 15px;
 }
-.form > img{
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+.form>img {
     max-width: 300px;
 }
-.buttons{
+
+.button {
+    background-color: #05ca74;
+    border-radius: 15px;
+    border-color: #05ca74;
+    border-style: none;
+    color: aliceblue;
+    width: 100px;
+    height: 40px;
     margin-top: 15px;
-    display: flex;
-    justify-content: space-between      ;
+}
+
+.button-reg {
+    background-color: white;
+    border-radius: 15px;
+    border-color: #05ca74;
+    border-style: none;
+    color: aliceblue;
+    width: 100px;
+    height: 40px;
+    color: #05ca74;
+    margin-top: 15px;
 }
