@@ -32,6 +32,16 @@
         <section class="register-pg">
             <form id="form-register" class="form">
                 <h3>Registre-se</h3> <br>
+                <div class="names d-flex">
+                    <section>
+                        <label for="">Primeiro nome: </label> <br>
+                        <input type="nome" name="nome" id="nome">
+                    </section>
+                    <section>
+                        <label for="">Ultimo nome: </label> <br>
+                        <input type="ultimonome" name="ultimonome" id="ultimonome">
+                    </section>
+                </div>
                 <label for="">Email: </label> <br>
                 <input type="email" name="email" id="email-reg"> <br>
                 <label for="">Digite uma senha: </label> <br>
@@ -57,16 +67,16 @@
 
             let objDados = LerDados();
             console.log(objDados);
-            
-            if(objDados == 0){
+
+            if (objDados == 0) {
                 alert('Usuário não existe!')
             }
-            else{
-                for(let i = 0; i < objDados.usuarios.length; i++){
+            else {
+                for (let i = 0; i < objDados.usuarios.length; i++) {
                     let usuario = objDados.usuarios[i];
                     console.log(usuario);
 
-                    if(usuario.email == email && usuario.senha == senha){
+                    if (usuario.email == email && usuario.senha == senha) {
                         alert('Encontrei')
 
                         location.href = "homepage.html";
@@ -82,19 +92,23 @@
             let email = document.getElementById('email-reg').value;
             let senha = document.getElementById('senha-reg').value;
             let senha2 = document.getElementById('senha-reg2').value;
+            let nome = document.getElementById('nome').value;
+            let sobrenome = document.getElementById('ultimonome').value;
 
             if (senha != senha2) {
                 alert('Senhas não conferem!')
             }
             else {
-                let usuario = new NovoUsuario(email, senha);
+                let usuario = new NovoUsuario(email, senha, nome, sobrenome);
 
                 SalvaUsuario(usuario);
             }
 
         })
 
-        function NovoUsuario(email, senha) {
+        function NovoUsuario(email, senha, nome, sobrenome) {
+            this.nome = nome;
+            this.sobrenome = sobrenome;
             this.email = email;
             this.senha = senha;
         }
@@ -121,7 +135,7 @@
 
                 return objDados
             }
-            else{
+            else {
                 return 0;
             }
         }

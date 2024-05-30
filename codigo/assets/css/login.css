@@ -28,7 +28,13 @@
     width: 100%;
     color: white;
 }
-
+.names input {
+    height: 40px;
+    width: 100%;
+    border-radius: 7px;
+    border-style: solid;
+    margin-bottom: 15px;
+}
 input {
     height: 40px;
     width: 100%;
