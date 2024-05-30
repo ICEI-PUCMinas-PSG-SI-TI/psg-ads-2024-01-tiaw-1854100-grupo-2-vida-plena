@@ -62,6 +62,41 @@
     </div>
     <div id="tagFooter"></div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="assets/js/FEED.js"></script>
+
+    <script>
+        //Variavel puxando o conteudo do form
+        var Form = document.getElementById("Conteudo");
+
+        //Escutador de evento para saber se o butão foi clicado
+        Form.addEventListener("submit", (e) => {
+        
+        //Faz para de dar reload na pagina
+        e.preventDefault();
+
+        //Puxando os texto do imput
+        var titulo = document.getElementById('titulo_caixa').value;
+        var descricao = document.getElementById('descricao_caixa').value;
+
+        objDados = {noticias: []};
+
+        //Verificando se existe esse banco
+        if(localStorage.hasOwnProperty("db")){
+
+            //Se sim, ele faz o objeto "objDados" receber o banco de dados de nome "db" 
+            objDados = JSON.parse(localStorage.getItem("db"))
+        }
+        //Se não ele faz ser add essa proxima linha de no banco de dados
+
+        //Em vez de usar o push (adicionar na após a ultima posição) usei o unshift que add antes da primeira
+        //O padrão é: id do input : variavel que recebeu seu valor
+        objDados.noticias.unshift({titulo_caixa: titulo, descricao_caixa: descricao});
+
+        //Tranformando as info adicionadas na variavel objDados em formato de string e enviando no lugar do banco atual
+        localStorage.setItem('db', JSON.stringify(objDados))
+        alert('Salvo')
+
+        //não precisa de um return, eu testei
+})
+    </script>
 </body>
 </html>
