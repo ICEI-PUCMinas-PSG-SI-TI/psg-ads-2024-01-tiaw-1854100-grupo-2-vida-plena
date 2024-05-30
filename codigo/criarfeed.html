@@ -70,32 +70,34 @@
         //Escutador de evento para saber se o butão foi clicado
         Form.addEventListener("submit", (e) => {
         
-        //Faz para de dar reload na pagina
-        e.preventDefault();
+            //Faz para de dar reload na pagina
+            e.preventDefault();
 
-        //Puxando os texto do imput
-        var titulo = document.getElementById('titulo_caixa').value;
-        var descricao = document.getElementById('descricao_caixa').value;
+            //Puxando os texto do imput
+            var titulo = document.getElementById('titulo_caixa').value;
+            var descricao = document.getElementById('descricao_caixa').value;
 
-        objDados = {noticias: []};
+            objDados = {noticias: []};
 
-        //Verificando se existe esse banco
-        if(localStorage.hasOwnProperty("db")){
+            //Verificando se existe esse banco
+            if(localStorage.hasOwnProperty("db")){
 
-            //Se sim, ele faz o objeto "objDados" receber o banco de dados de nome "db" 
-            objDados = JSON.parse(localStorage.getItem("db"))
-        }
-        //Se não ele faz ser add essa proxima linha de no banco de dados
+                //Se sim, ele faz o objeto "objDados" receber o banco de dados de nome "db" 
+                objDados = JSON.parse(localStorage.getItem("db"))
+            }
+            //Se não ele faz ser add essa proxima linha de no banco de dados
 
-        //Em vez de usar o push (adicionar na após a ultima posição) usei o unshift que add antes da primeira
-        //O padrão é: id do input : variavel que recebeu seu valor
-        objDados.noticias.unshift({titulo_caixa: titulo, descricao_caixa: descricao});
+            //Em vez de usar o push (adicionar na após a ultima posição) usei o unshift que add antes da primeira
+            //O padrão é: id do input : variavel que recebeu seu valor
+            objDados.noticias.unshift({titulo_caixa: titulo, descricao_caixa: descricao});
 
-        //Tranformando as info adicionadas na variavel objDados em formato de string e enviando no lugar do banco atual
-        localStorage.setItem('db', JSON.stringify(objDados))
-        alert('Salvo')
+            //Tranformando as info adicionadas na variavel objDados em formato de string e enviando no lugar do banco atual
+            localStorage.setItem('db', JSON.stringify(objDados))
+            alert('Salvo')
 
-        //não precisa de um return, eu testei
+            location.href = "Feed.html"
+
+            //não precisa de um return, eu testei
 })
     </script>
 </body>
