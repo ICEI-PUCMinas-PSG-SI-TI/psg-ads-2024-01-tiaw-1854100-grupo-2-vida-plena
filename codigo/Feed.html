@@ -185,6 +185,9 @@
         //---COMPARTILHAR POSTAGEM COM LINK (API WHATSAPP)  ------
         function compartilharlink(pos){
             console.log(location.host + location.pathname + "#"+ pos)
+            let locationlink = (location.host + location.pathname + "#"+ pos)
+
+            location.href = "https://api.whatsapp.com/send?"+locationlink;
         }
     </script>
 </body>
