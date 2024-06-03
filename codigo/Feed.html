@@ -76,7 +76,7 @@
                 <div class="border-top">
                 <i type="button" style="color:${noticia.like};" onclick="btncurtir(${i})" class="bi bi-heart-fill mx-3" id="botaocurtir${i}"></i>
                 <i type="button" onclick="abrircomentario(${i})" class="bi bi-chat mx-3" id="botoes"></i>
-                <i type="button" class="bi bi-send text-end mx-3" id="botoes"></i>
+                <i type="button" onclick="compartilharlink(${i})" class="bi bi-send text-end mx-3" id="botoes"></i>
                 <div id="comentar${i}" style="display:none;" >
                     <strong id="comentar" class="text-center">Comentar</strong>
                     <div id="comentarios">
@@ -181,6 +181,11 @@
             return objComentarios;
             
         }//--FIM
+
+        //---COMPARTILHAR POSTAGEM COM LINK (API WHATSAPP)  ------
+        function compartilharlink(pos){
+            console.log(location.host + location.pathname + "#"+ pos)
+        }
     </script>
 </body>
 </html>
