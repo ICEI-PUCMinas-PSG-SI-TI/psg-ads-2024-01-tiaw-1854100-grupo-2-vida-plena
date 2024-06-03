@@ -4,7 +4,7 @@
 }
 
 #LeR {
-    margin-top: 15px;
+    margin-top: 50px;
     display: flex;
     padding: 0;
 }
@@ -27,6 +27,7 @@
     background-color: #05ca74;
     width: 100%;
     color: white;
+    padding: 20px;
 }
 .names input {
     height: 40px;
@@ -73,4 +74,7 @@ label {
     height: 40px;
     color: #05ca74;
     margin-top: 15px;
+}
+#tagFooter{
+    display: none;
 }
