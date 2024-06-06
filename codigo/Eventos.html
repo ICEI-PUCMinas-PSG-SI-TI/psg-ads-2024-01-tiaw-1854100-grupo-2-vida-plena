@@ -108,12 +108,12 @@
                     <p>Local: ${event.location}</p>
                     <p>Descrição: ${event.description}</p>
                     <button class="btn btn-success btn-complete">Concluir</button>
+                    <button class="btn btn-success btn-confirm">Confirmar Presença</button>
                     <button class="btn btn-danger btn-delete">Deletar</button>
-                    <button class="btn btn-primary btn-confirm">Confirmar Presença</button>
-                    <div class="confirm-container mt-3">
+                    <div class="confirm-container mt-3 d-none">
                         <input type="text" class="form-control confirm-input" placeholder="Seu Nome" required>
-                        <button class="btn btn-primary mt-2 btn-save-confirm">Salvar</button>
-                        <button class="btn btn-warning mt-2 btn-cancel-confirm">Cancelar Presença</button>
+                        <button class="btn btn-success mt-2 btn-save-confirm">Salvar</button>
+                        <button class="btn btn-danger mt-2 btn-cancel-confirm">Cancelar Presença</button>
                         <h4 class="mt-3">Lista de Presença</h4>
                         <ul class="attendanceList list-group"></ul>
                     </div>
