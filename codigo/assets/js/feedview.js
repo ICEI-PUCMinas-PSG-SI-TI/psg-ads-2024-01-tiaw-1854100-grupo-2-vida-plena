@@ -1,7 +1,23 @@
+function compartilharfeed(i){
+    let host = location.host;
+    console.log(location)
+    let link = `detalhes.html?id=${i}`;
+    
+    if(navigator.share){
+        navigator.share({
+            text: 'Funcionou a API Nativa de COmp',
+            url: link
+        }).then(() => {console.log("Obrigado por compartilhar!")
+       })
+       .catch((err) => console.error(err))
+} else {
+    alert("O navegador não suporta a função de compartilhamento nativo!")
+}}
+
 // function compartilharfeed(i){
 //     let host = location.host;
-//     console.log(host + `/codigo/detalhes.html?id=${i}`)
-    
+//     let link =  host + `/codigo/detalhes.html?id=${i}`;
+//     return link;
 // }
 
 function LerNoticia(i){
@@ -39,7 +55,7 @@ function LerNoticia(i){
         <div class="border-top">
         <i type="button" style="color:${noticia.like};" onclick="btncurtir(${i})" class="bi bi-heart-fill mx-3" id="botaocurtir${i}"></i>
         <i type="button" onclick="abrircomentario(${i})" class="bi bi-chat mx-3" id="botoes"></i>
-        <i type="button" onclick="compartilharfeed(${i})" class="bi bi-send text-end mx-3" id="botoes"></i>
+        <i type="button" onclick="compartilharfeed(${i})" class="bi bi-send text-end mx-3"></i>
         <div id="comentar${i}" style="display:none;" >
             <strong id="comentar" class="text-center">Comentar</strong>
             <div id="comentarios">
