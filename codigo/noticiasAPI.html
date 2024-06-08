@@ -72,7 +72,7 @@
     <div id="tagFooter"></div>
 
     <script>
-        fetch("https://newsapi.org/v2/everything?q=idosos&language=pt&apiKey=8178d96946e8481596a2347e96df1a05")
+        fetch("http://newsapi.org/v2/everything?q=idosos&language=pt&apiKey=8178d96946e8481596a2347e96df1a05")
             .then((res) => res.json())
             .then((data) => {
 
@@ -89,7 +89,10 @@
                         <div>
                             <h2>${artigo.title}</h2>
                             <p>${artigo.description}</p><br>
-                            <a style="color:#19d080" href="${artigo.url}">Saiba mais</a>
+                            <div class="d-flex justify-content-between">
+                                <p4>Postado por ${artigo.author}, <i class="bi bi-clock"></i> ${artigo.publishedAt}</p4>
+                                <a style="color:#19d080" href="${artigo.url}">Saiba mais</a>
+                            </div>
                         </div>
                         <img class="ms-5" src="${artigo.urlToImage}" style="width:230px; heigth:200px" alt="">
                     </div>`
