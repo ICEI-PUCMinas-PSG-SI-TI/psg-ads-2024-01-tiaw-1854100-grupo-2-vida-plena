@@ -45,7 +45,7 @@ function Carregar() {
         //Acumulando todas as informações desse vetor em strImprimir
         //Troquei essa informação por um card pronto do bootstrap
 
-        strImprimir += `<div class="p-1 shadow" id="${i}" style="width: 100%;">
+        strImprimir += `<div class="p-1 border my-5" id="${i}" style="width: 100%;">
         <img src="https://picsum.photos/800/600?random=1" class="card-img-top" alt="...">
 
         <div class="border-top">
