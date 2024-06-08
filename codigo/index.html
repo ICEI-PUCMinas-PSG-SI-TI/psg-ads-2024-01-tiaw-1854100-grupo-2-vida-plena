@@ -115,10 +115,10 @@
 
         function SalvaUsuario(usuario) {
             let objDados = { usuarios: [] };
-            if (localStorage.hasOwnProperty("usuarios")) {
+            if (localStorage.hasOwnProperty("db")) {
 
                 //Se sim, ele faz o objeto "objDados" receber o banco de dados de nome "db" 
-                objDados = JSON.parse(localStorage.getItem("usuarios"))
+                objDados = JSON.parse(localStorage.getItem("db"))
             }
 
             objDados.usuarios.unshift(usuario);
