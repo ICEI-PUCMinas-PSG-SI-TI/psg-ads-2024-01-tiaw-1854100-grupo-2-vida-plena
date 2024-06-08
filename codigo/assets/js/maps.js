@@ -39,11 +39,22 @@ function geoCodeConvert(address) {
     });
 }
 
+function createLi(className, textContent) {
+    const li = document.createElement('li');
+    li.classList.add(className);
+    li.textContent = textContent;
+    return li;
+}
+
+function createLocationInfo(nomeEvento, data, local, descricao) {
+    
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     const map = initMap(); // Inicializa o mapa com a visão padrão de Belo Horizonte
 
     const selectedEventLocation = localStorage.getItem('selectedEventLocation');
-
+    const ulDescription = document.getElementById('event-description');
     if (selectedEventLocation) {
         const address = JSON.parse(selectedEventLocation);
         geoCodeConvert(address)
