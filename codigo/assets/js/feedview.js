@@ -2,12 +2,12 @@
 function compartilharfeed(i) {
     let link = `detalhes.html?id=${i}`;
     let noticia =  LerNoticia(i);
-    console.log(location.href)
+
     if (navigator.share) {
         navigator.share({
             title : noticia.titulo_caixa,
             text: noticia.descricao_caixa,
-            url: link
+            url: link.value
         })
         .then(() => console.log("Obrigado por compartilhar!"))
         .catch((err) => console.error(err))
