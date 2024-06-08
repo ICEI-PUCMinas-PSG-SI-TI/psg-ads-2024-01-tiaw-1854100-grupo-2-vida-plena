@@ -115,19 +115,22 @@ function abrircomentario(i) {
 
 //função que recebe o comentario e leva para o LocalStorage
 function comentar(i) {
+    let usuarios =  JSON.parse(localStorage.getItem('usuarios'));
+    let usuario = usuarios.usuarios[0];
+
     var comentario = document.getElementById('comentario' + i).value;
     if (localStorage.hasOwnProperty('db')) {
         objDados = JSON.parse(localStorage.getItem('db'))
     }
     if (!objDados.noticias[i].comentarios) {
         objDados.noticias[i].comentarios = new Array();
-        objDados.noticias[i].comentarios.unshift(comentario);
+        objDados.noticias[i].comentarios.unshift(`<strong>${usuario.nome +"</strong>: "+comentario}`);
 
         localStorage.setItem('db', JSON.stringify(objDados));
         alert('Comentário salvo, pela primeira vez!')
     }
     else {
-        objDados.noticias[i].comentarios.unshift(comentario);
+        objDados.noticias[i].comentarios.unshift(`<strong>${usuario.nome +"</strong>: "+comentario}`);
 
         localStorage.setItem('db', JSON.stringify(objDados));
         alert('Comentário salvo! Já existo')
