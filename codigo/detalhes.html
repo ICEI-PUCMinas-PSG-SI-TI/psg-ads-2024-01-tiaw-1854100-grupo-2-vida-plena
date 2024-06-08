@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalher de Feed</title>
+    <!--INICIO - Script do JQuery e Função para inserir o cabeçalho-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $("#tagCabecalho").load("cabecalho.html");
+            $("#tagMenuLateral").load("menulateral.html");
+            $("#tagFooter").load("footer.html");
+        });
+    </script>
+    <!--FIM-->
+    <style>
+        /*INICIO BOTOES COMENTARIO,CURTIR E ENVIAR*/
+        i {
+            font-size: 30px;
+        }
+
+        /*FIM BOTAO COMENTARIO*/
+
+        #comentarios {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="tagCabecalho"></div>
+
+    <div class="d-flex">
+        <div id="tagMenuLateral"></div>
+        <main class="container-fluid">
+            <div class="row">
+                <div class="col-xl-6 offset-xl-3">
+                    <div id="tela"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+    </div>
+
+    <div id="tagFooter"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="assets/js/feedview.js"></script>
+    <script>
+        console.log(location.search)
+        let params = new URLSearchParams(location.search);
+        let i = params.get('id');
+        let noticia = LerNoticia(i);
+
+        let comentarios = LerComentarios(i);
+        let strImprimir = `<div class="p-1 shadow m-2" id="${i}" style="width: 100%;">
+                <img src="https://picsum.photos/800/600?random=1" class="card-img-top" alt="...">
+
+                <div class="border-top">
+                <i type="button" style="color:${noticia.like};" onclick="btncurtir(${i})" class="bi bi-heart-fill mx-3" id="botaocurtir${i}"></i>
+                <i type="button" onclick="abrircomentario(${i})" class="bi bi-chat mx-3" id="botoes"></i>
+                <i type="button" onclick="compartilharfeed(${i})" class="bi bi-send text-end mx-3" id="botoes"></i>
+                <div id="comentar${i}" style="display:none;" >
+                    <strong id="comentar" class="text-center">Comentar</strong>
+                    <div id="comentarios">
+                    <textarea class="textarea" style="width:100%;" id="comentario${i}"></textarea>
+                    <input onclick="comentar(${i})" type="submit"></input>
+                    </div>
+                </div>
+                </div>
+
+                <div class="card-body">
+                <p class="card-text text-center"><strong>${noticia.titulo_caixa}</strong></p>
+                <p class="card-text p-3">${noticia.descricao_caixa}</p>
+                <h5 class="text-center"><strong>Comentarios</strong></h5>
+                <div class="container" id="TelaComent${i}">${comentarios}</div>
+            </div>`
+
+        tela.innerHTML = strImprimir;
+        //console.log(noticia.titulo_caixa)
+        //noticia = noticias.find (function (elem) {return elem.id == id})
+
+    </script>
+</body>
+
+</html>
