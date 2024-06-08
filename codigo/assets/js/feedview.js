@@ -2,12 +2,12 @@
 function compartilharfeed(i) {
     let link = `detalhes.html?id=${i}`;
     let noticia =  LerNoticia(i);
-    console.log(location.href)
+
     if (navigator.share) {
         navigator.share({
             title : noticia.titulo_caixa,
             text: noticia.descricao_caixa,
-            url: link
+            url: link.value
         })
         .then(() => console.log("Obrigado por compartilhar!"))
         .catch((err) => console.error(err))
@@ -45,7 +45,7 @@ function Carregar() {
         //Acumulando todas as informações desse vetor em strImprimir
         //Troquei essa informação por um card pronto do bootstrap
 
-        strImprimir += `<div class="p-1 shadow" id="${i}" style="width: 100%;">
+        strImprimir += `<div class="p-1 border my-5" id="${i}" style="width: 100%;">
         <img src="https://picsum.photos/800/600?random=1" class="card-img-top" alt="...">
 
         <div class="border-top">
@@ -115,19 +115,22 @@ function abrircomentario(i) {
 
 //função que recebe o comentario e leva para o LocalStorage
 function comentar(i) {
+    let usuarios =  JSON.parse(localStorage.getItem('usuarios'));
+    let usuario = usuarios.usuarios[0];
+
     var comentario = document.getElementById('comentario' + i).value;
     if (localStorage.hasOwnProperty('db')) {
         objDados = JSON.parse(localStorage.getItem('db'))
     }
     if (!objDados.noticias[i].comentarios) {
         objDados.noticias[i].comentarios = new Array();
-        objDados.noticias[i].comentarios.unshift(comentario);
+        objDados.noticias[i].comentarios.unshift(`<strong>${usuario.nome +"</strong>: "+comentario}`);
 
         localStorage.setItem('db', JSON.stringify(objDados));
         alert('Comentário salvo, pela primeira vez!')
     }
     else {
-        objDados.noticias[i].comentarios.unshift(comentario);
+        objDados.noticias[i].comentarios.unshift(`<strong>${usuario.nome +"</strong>: "+comentario}`);
 
         localStorage.setItem('db', JSON.stringify(objDados));
         alert('Comentário salvo! Já existo')
