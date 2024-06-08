@@ -66,7 +66,6 @@
             let senha = document.getElementById('senha-log').value;
 
             let objDados = LerDados();
-            console.log(objDados);
 
             if (objDados == 0) {
                 alert('Usuário não existe!')
@@ -74,11 +73,10 @@
             else {
                 for (let i = 0; i < objDados.usuarios.length; i++) {
                     let usuario = objDados.usuarios[i];
-                    console.log(usuario);
 
                     if (usuario.email == email && usuario.senha == senha) {
                         alert('Encontrei')
-
+                        UsuarioLogado(email, senha);
                         location.href = "homepage.html";
                     }
                 }
@@ -138,6 +136,20 @@
             else {
                 return 0;
             }
+        }
+
+        function UsuarioLogado(email, senha) {
+            let Usuarios = LerDados();
+
+            for(i = 0; i < Usuarios.usuarios.length; i++){
+                usuario = Usuarios.usuarios[i];
+                console.log(usuario.nome)
+                if(usuario.email == email && usuario.senha == senha){
+                    Usuarios.logado = [{"email": usuario.email, "senha": usuario.senha, "nome": usuario.nome, "sobrenome": usuario.sobrenome }];
+                }
+            }
+
+            localStorage.setItem('usuarios', JSON.stringify(Usuarios));
         }
     </script>
 </body>

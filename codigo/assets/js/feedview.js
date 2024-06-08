@@ -40,8 +40,6 @@ function Carregar() {
 
         let comentarios = LerComentarios(i);
 
-        console.log(comentarios)
-
         //Acumulando todas as informações desse vetor em strImprimir
         //Troquei essa informação por um card pronto do bootstrap
 
@@ -116,7 +114,7 @@ function abrircomentario(i) {
 //função que recebe o comentario e leva para o LocalStorage
 function comentar(i) {
     let usuarios =  JSON.parse(localStorage.getItem('usuarios'));
-    let usuario = usuarios.usuarios[0];
+    let usuario = usuarios.logado[0];
 
     var comentario = document.getElementById('comentario' + i).value;
     if (localStorage.hasOwnProperty('db')) {
