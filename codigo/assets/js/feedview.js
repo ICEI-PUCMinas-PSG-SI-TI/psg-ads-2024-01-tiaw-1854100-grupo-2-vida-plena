@@ -1,16 +1,16 @@
 //-INICIO--API COMPARTILHAMENTO NATIVO - WEB SHARE API----
 function compartilharfeed(i) {
     let link = `detalhes.html?id=${i}`;
-    let noticia =  LerNoticia(i);
+    let noticia = LerNoticia(i);
 
     if (navigator.share) {
         navigator.share({
-            title : noticia.titulo_caixa,
+            title: noticia.titulo_caixa,
             text: noticia.descricao_caixa,
             url: link.value
         })
-        .then(() => console.log("Obrigado por compartilhar!"))
-        .catch((err) => console.error(err))
+            .then(() => console.log("Obrigado por compartilhar!"))
+            .catch((err) => console.error(err))
     } else {
         alert("O navegador não suporta a função de compartilhamento nativo!")
     }
@@ -40,6 +40,7 @@ function Carregar() {
 
         let comentarios = LerComentarios(i);
 
+
         //Acumulando todas as informações desse vetor em strImprimir
         //Troquei essa informação por um card pronto do bootstrap
 
@@ -63,8 +64,8 @@ function Carregar() {
         <p class="card-text text-center"><strong>${noticia.titulo_caixa}</strong></p>
         <p id="descricao" class="card-text p-3">${noticia.descricao_caixa}</p>
         <p><a href="detalhes.html?id=${i}">Ver Publicação</a></p>
-        </div>
-        <h5 class="text-center"><strong>Comentarios</strong></h5>
+        </div><hr style="height:1px;border-width:0;color:gray;background-color:gray">
+        <h5 class="text-center"><strong>Comentários</strong></h5>
         <div class="container" id="TelaComent${i}">${comentarios}</div>
     </div>`
     }
@@ -113,7 +114,7 @@ function abrircomentario(i) {
 
 //função que recebe o comentario e leva para o LocalStorage
 function comentar(i) {
-    let usuarios =  JSON.parse(localStorage.getItem('usuarios'));
+    let usuarios = JSON.parse(localStorage.getItem('usuarios'));
     let usuario = usuarios.logado[0];
 
     var comentario = document.getElementById('comentario' + i).value;
@@ -122,13 +123,13 @@ function comentar(i) {
     }
     if (!objDados.noticias[i].comentarios) {
         objDados.noticias[i].comentarios = new Array();
-        objDados.noticias[i].comentarios.unshift(`<strong>${usuario.nome +"</strong>: "+comentario}`);
+        objDados.noticias[i].comentarios.unshift(`<strong>${usuario.nome + "</strong>: " + comentario}`);
 
         localStorage.setItem('db', JSON.stringify(objDados));
         alert('Comentário salvo, pela primeira vez!')
     }
     else {
-        objDados.noticias[i].comentarios.unshift(`<strong>${usuario.nome +"</strong>: "+comentario}`);
+        objDados.noticias[i].comentarios.unshift(`<strong>${usuario.nome + "</strong>: " + comentario}`);
 
         localStorage.setItem('db', JSON.stringify(objDados));
         alert('Comentário salvo! Já existo')
