@@ -28,6 +28,9 @@
             width: 100%;
         }
 
+        #descricao {
+            text-align: justify;
+        }
     </style>
 </head>
 
@@ -48,7 +51,9 @@
 
     <div id="tagFooter"></div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
     <script src="assets/js/feedview.js"></script>
     <script>
         console.log(location.search)
@@ -76,7 +81,7 @@
 
                 <div class="card-body">
                 <p class="card-text text-center"><strong>${noticia.titulo_caixa}</strong></p>
-                <p class="card-text p-3">${noticia.descricao_caixa}</p>
+                <p id="descricao" class="card-text p-3">${noticia.descricao_caixa}</p>
                 <h5 class="text-center"><strong>Comentarios</strong></h5>
                 <div class="container" id="TelaComent${i}">${comentarios}</div>
             </div>`

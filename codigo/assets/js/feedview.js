@@ -1,18 +1,20 @@
+//-INICIO--API COMPARTILHAMENTO NATIVO - WEB SHARE API----
 function compartilharfeed(i) {
     let link = `detalhes.html?id=${i}`;
-
+    let noticia =  LerNoticia(i);
+    console.log(location.href)
     if (navigator.share) {
         navigator.share({
-            text: 'Funcionou a API Nativa de Compartilhamento',
+            title : noticia.titulo_caixa,
+            text: noticia.descricao_caixa,
             url: link
-        }).then(() => {
-            console.log("Obrigado por compartilhar!")
         })
-            .catch((err) => console.error(err))
+        .then(() => console.log("Obrigado por compartilhar!"))
+        .catch((err) => console.error(err))
     } else {
         alert("O navegador não suporta a função de compartilhamento nativo!")
     }
-}
+}//-FIM--API COMPARTILHAMENTO NATIVO - WEB SHARE API----
 
 function LerNoticia(i) {
     let objDados = JSON.parse(localStorage.getItem('db'));
@@ -61,7 +63,7 @@ function Carregar() {
 
         <div class="card-body">
         <p class="card-text text-center"><strong>${noticia.titulo_caixa}</strong></p>
-        <p class="card-text p-3">${noticia.descricao_caixa}</p>
+        <p id="descricao" class="card-text p-3">${noticia.descricao_caixa}</p>
         <p><a href="detalhes.html?id=${i}">Ver Publicação</a></p>
         </div>
         <h5 class="text-center"><strong>Comentarios</strong></h5>
