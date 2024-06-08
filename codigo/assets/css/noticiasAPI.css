@@ -1,0 +1,13 @@
+div>h2{
+    font-family: Arial, Helvetica, sans-serif;
+    color:rgb(204, 15, 15);
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: justify;
+}
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    text-align: justify;
+}
