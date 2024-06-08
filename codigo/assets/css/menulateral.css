@@ -48,3 +48,8 @@ ul li.item-menu a .icon > i{
     display: flex;
     margin-left: 22px;
 }
+@media (max-width: 600px) {
+    nav.menulateral {
+      display: none;
+    }
+}
