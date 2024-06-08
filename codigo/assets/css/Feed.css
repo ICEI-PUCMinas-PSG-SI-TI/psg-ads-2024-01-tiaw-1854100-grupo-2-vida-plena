@@ -7,3 +7,6 @@ i{
 #comentarios{
     width: 100%;
 }
+#descricao{
+    text-align: justify;
+}

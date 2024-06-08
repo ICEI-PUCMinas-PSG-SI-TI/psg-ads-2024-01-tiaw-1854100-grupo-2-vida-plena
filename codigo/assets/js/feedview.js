@@ -1,33 +1,29 @@
-function compartilharfeed(i){
-    let host = location.host;
-    console.log(location)
+//-INICIO--API COMPARTILHAMENTO NATIVO - WEB SHARE API----
+function compartilharfeed(i) {
     let link = `detalhes.html?id=${i}`;
-    
-    if(navigator.share){
+    let noticia =  LerNoticia(i);
+    console.log(location.href)
+    if (navigator.share) {
         navigator.share({
-            text: 'Funcionou a API Nativa de COmp',
+            title : noticia.titulo_caixa,
+            text: noticia.descricao_caixa,
             url: link
-        }).then(() => {console.log("Obrigado por compartilhar!")
-       })
-       .catch((err) => console.error(err))
-} else {
-    alert("O navegador não suporta a função de compartilhamento nativo!")
-}}
+        })
+        .then(() => console.log("Obrigado por compartilhar!"))
+        .catch((err) => console.error(err))
+    } else {
+        alert("O navegador não suporta a função de compartilhamento nativo!")
+    }
+}//-FIM--API COMPARTILHAMENTO NATIVO - WEB SHARE API----
 
-// function compartilharfeed(i){
-//     let host = location.host;
-//     let link =  host + `/codigo/detalhes.html?id=${i}`;
-//     return link;
-// }
-
-function LerNoticia(i){
+function LerNoticia(i) {
     let objDados = JSON.parse(localStorage.getItem('db'));
     let noticia = objDados.noticias[i];
     return noticia;
 }
 
- //Função para caregar na pagina de FEED
- function Carregar(){
+//Função para caregar na pagina de FEED
+function Carregar() {
     //Puxo o atual localStorage, tem que ter isso aqui, e dentro do for
     var objDados = JSON.parse(localStorage.getItem("db"))
 
@@ -38,9 +34,9 @@ function LerNoticia(i){
     strImprimir = '';
 
     //For para colocar todas as informações, como titulo e descrição em strImprimir
-    for(var i=0; i<objDados.noticias.length; i++){
+    for (var i = 0; i < objDados.noticias.length; i++) {
         //Variavel que recebe o vetor contido no localStorage
-        let noticia = objDados.noticias[i]; 
+        let noticia = objDados.noticias[i];
 
         let comentarios = LerComentarios(i);
 
@@ -49,7 +45,7 @@ function LerNoticia(i){
         //Acumulando todas as informações desse vetor em strImprimir
         //Troquei essa informação por um card pronto do bootstrap
 
-        strImprimir += `<div class="p-1 shadow m-2" id="${i}" style="width: 100%;">
+        strImprimir += `<div class="p-1 shadow" id="${i}" style="width: 100%;">
         <img src="https://picsum.photos/800/600?random=1" class="card-img-top" alt="...">
 
         <div class="border-top">
@@ -67,7 +63,7 @@ function LerNoticia(i){
 
         <div class="card-body">
         <p class="card-text text-center"><strong>${noticia.titulo_caixa}</strong></p>
-        <p class="card-text p-3">${noticia.descricao_caixa}</p>
+        <p id="descricao" class="card-text p-3">${noticia.descricao_caixa}</p>
         <p><a href="detalhes.html?id=${i}">Ver Publicação</a></p>
         </div>
         <h5 class="text-center"><strong>Comentarios</strong></h5>
@@ -81,59 +77,59 @@ function LerNoticia(i){
 
 
 //função para mudar a cor do botão curtir --INICIO--
-function btncurtir(i){
+function btncurtir(i) {
     //puxei o Local storege e atribui a variavel objDados
-    objDados=JSON.parse(localStorage.getItem("db"))
+    objDados = JSON.parse(localStorage.getItem("db"))
 
     //crie uma variavel para a cor do botao, inicialmente preta
-    var curtido='black';
+    var curtido = 'black';
 
     //puxei o id do botao Like
-    var botao=document.getElementById("botaocurtir"+i);
+    var botao = document.getElementById("botaocurtir" + i);
 
     //fiz uma verificação da cor do botao. Se estiver preto vai ficar vermelho, e visse versa. Por final grava no Local storage a cor do botão para quando reiniciar a page as infos do botao estarem estarem salvas.
-    if(botao.style.color==="black"){
-        botao.style.color="red";
-        curtido='red';
-        objDados.noticias[i].like=curtido;
-        localStorage.setItem('db',JSON.stringify(objDados));
+    if (botao.style.color === "black") {
+        botao.style.color = "red";
+        curtido = 'red';
+        objDados.noticias[i].like = curtido;
+        localStorage.setItem('db', JSON.stringify(objDados));
     } else {
-        botao.style.color="black";
-        objDados.noticias[i].like=curtido;
-        localStorage.setItem('db',JSON.stringify(objDados));
+        botao.style.color = "black";
+        objDados.noticias[i].like = curtido;
+        localStorage.setItem('db', JSON.stringify(objDados));
     }
-    
+
 }//--FIM--
 
 // - INICIO - Function para abrir com o botão de Comentar 
-function abrircomentario(i){
-    var elemento = document.getElementById("comentar"+i);
+function abrircomentario(i) {
+    var elemento = document.getElementById("comentar" + i);
     if (elemento.style.display === "none") {
         elemento.style.display = "block"; // Mostra o elemento
     } else {
         elemento.style.display = "none"; // Oculta o elemento
     }
 
-    }// - FIM - Function para abrir com o botão de Comentar
-    
+}// - FIM - Function para abrir com o botão de Comentar
 
-    //função que recebe o comentario e leva para o LocalStorage
-    function comentar(i){
-    var comentario=document.getElementById('comentario'+i).value;
-    if(localStorage.hasOwnProperty('db')){
-        objDados =JSON.parse(localStorage.getItem('db'))
+
+//função que recebe o comentario e leva para o LocalStorage
+function comentar(i) {
+    var comentario = document.getElementById('comentario' + i).value;
+    if (localStorage.hasOwnProperty('db')) {
+        objDados = JSON.parse(localStorage.getItem('db'))
     }
-    if(!objDados.noticias[i].comentarios){
+    if (!objDados.noticias[i].comentarios) {
         objDados.noticias[i].comentarios = new Array();
         objDados.noticias[i].comentarios.unshift(comentario);
 
-        localStorage.setItem('db',JSON.stringify(objDados));
+        localStorage.setItem('db', JSON.stringify(objDados));
         alert('Comentário salvo, pela primeira vez!')
     }
-    else{
+    else {
         objDados.noticias[i].comentarios.unshift(comentario);
 
-        localStorage.setItem('db',JSON.stringify(objDados));
+        localStorage.setItem('db', JSON.stringify(objDados));
         alert('Comentário salvo! Já existo')
     }
     ImprimirComentarios(i, objDados);
@@ -141,31 +137,23 @@ function abrircomentario(i){
 }
 
 //----IMPRIMIR OS COMENTÁRIOS ----INICIO
-function ImprimirComentarios(pos, objDados){
+function ImprimirComentarios(pos, objDados) {
     var strComentarios = '';
-    var TelaComent=document.getElementById('TelaComent'+pos)
+    var TelaComent = document.getElementById('TelaComent' + pos)
 
-    for(var i = 0;i < objDados.noticias[pos].comentarios.length; i++){
+    for (var i = 0; i < objDados.noticias[pos].comentarios.length; i++) {
         let comentario = objDados.noticias[pos].comentarios[i];
 
         strComentarios += `<p>${comentario}</p>`;
 
     }
 
-    return TelaComent.innerHTML=strComentarios;
-    }
-    function LerComentarios(i){
+    return TelaComent.innerHTML = strComentarios;
+}
+function LerComentarios(i) {
     objDados = JSON.parse(localStorage.getItem('db'))
     objComentarios = objDados.noticias[i].comentarios;
 
     return objComentarios;
-    
+
 }//--FIM
-
-//---COMPARTILHAR POSTAGEM COM LINK (API WHATSAPP)  ------
-function compartilharlink(pos){
-    console.log(location.host + location.pathname + "#"+ pos)
-    let locationlink = (location.host + location.pathname + "#"+ pos)
-
-    location.href = "https://api.whatsapp.com/send?"+locationlink;
-}
