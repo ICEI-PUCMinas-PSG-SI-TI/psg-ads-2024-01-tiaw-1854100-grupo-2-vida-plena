@@ -117,27 +117,36 @@ function abrircomentario(i) {
 
 //função que recebe o comentario e leva para o LocalStorage
 function comentar(i) {
+    let verifica = localStorage.hasOwnProperty('usuarios');
     let usuarios = JSON.parse(localStorage.getItem('usuarios'));
-    let usuario = usuarios.logado[0];
 
-    var comentario = document.getElementById('comentario' + i).value;
-    if (localStorage.hasOwnProperty('db')) {
-        objDados = JSON.parse(localStorage.getItem('db'))
-    }
-    if (!objDados.noticias[i].comentarios) {
-        objDados.noticias[i].comentarios = new Array();
-        objDados.noticias[i].comentarios.unshift(`<strong>${usuario.nome + "</strong>: " + comentario}`);
+    if (verifica != false) {
+        let usuario = usuarios.logado[0];
+        var comentario = document.getElementById('comentario' + i).value;
+        if (localStorage.hasOwnProperty('db')) {
+            objDados = JSON.parse(localStorage.getItem('db'))
+        }
+        if (!objDados.noticias[i].comentarios) {
+            objDados.noticias[i].comentarios = new Array();
+            objDados.noticias[i].comentarios.unshift(`<strong>${usuario.nome + "</strong>: " + comentario}`);
 
-        localStorage.setItem('db', JSON.stringify(objDados));
-        alert('Comentário salvo, pela primeira vez!')
+            localStorage.setItem('db', JSON.stringify(objDados));
+            alert('Comentário salvo!')
+        }
+        else {
+            objDados.noticias[i].comentarios.unshift(`<strong>${usuario.nome + "</strong>: " + comentario}`);
+
+            localStorage.setItem('db', JSON.stringify(objDados));
+            alert('Comentário salvo!')
+        }
+        ImprimirComentarios(i, objDados);
     }
     else {
-        objDados.noticias[i].comentarios.unshift(`<strong>${usuario.nome + "</strong>: " + comentario}`);
-
-        localStorage.setItem('db', JSON.stringify(objDados));
-        alert('Comentário salvo! Já existo')
+        let escolha = confirm(`Para comentar, efetue o login! Deseja logar?`)
+        if (escolha == true) {
+            location.href = 'index.html'
+        }
     }
-    ImprimirComentarios(i, objDados);
 
 }
 
