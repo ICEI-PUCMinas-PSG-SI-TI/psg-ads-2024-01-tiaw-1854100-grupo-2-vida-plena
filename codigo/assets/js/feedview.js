@@ -7,7 +7,7 @@ function compartilharfeed(i) {
         navigator.share({
             title: noticia.titulo_caixa,
             text: noticia.descricao_caixa,
-            url: link.value
+            url: link
         })
             .then(() => console.log("Obrigado por compartilhar!"))
             .catch((err) => console.error(err))
