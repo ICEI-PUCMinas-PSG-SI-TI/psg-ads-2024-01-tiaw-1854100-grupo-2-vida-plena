@@ -1,4 +1,6 @@
 //-INICIO--API COMPARTILHAMENTO NATIVO - WEB SHARE API----
+//OBS: Como a função usa o compartilhamento do sistema, ela pode não ficar responsiva no celular, se a pagina foi executada no pc ela irá mostrar o compartilhamento do pc (NATIVO)
+
 function compartilharfeed(i) {
     let link = `detalhes.html?id=${i}`;
     let noticia = LerNoticia(i);
@@ -7,7 +9,7 @@ function compartilharfeed(i) {
         navigator.share({
             title: noticia.titulo_caixa,
             text: noticia.descricao_caixa,
-            url: link.value
+            url: link
         })
             .then(() => console.log("Obrigado por compartilhar!"))
             .catch((err) => console.error(err))
@@ -16,11 +18,12 @@ function compartilharfeed(i) {
     }
 }//-FIM--API COMPARTILHAMENTO NATIVO - WEB SHARE API----
 
+//-INICIO--LER AS NOTICIAS SALVAS NO DB----
 function LerNoticia(i) {
     let objDados = JSON.parse(localStorage.getItem('db'));
     let noticia = objDados.noticias[i];
     return noticia;
-}
+}//-FIM--LER AS NOTICIAS SALVAS NO DB----
 
 //Função para caregar na pagina de FEED
 function Carregar() {
