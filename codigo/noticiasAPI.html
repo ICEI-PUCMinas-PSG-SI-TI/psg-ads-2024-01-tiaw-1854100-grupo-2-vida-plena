@@ -23,16 +23,13 @@
 <body>
     <!--Chamando o cabeçalho-->
     <div id="tagCabecalho"></div>
-    <!--<div id="comentarios">
-        <textarea id="comentario"></textarea></div>
-        <input onclick="comentar()" type="submit"></input>
-    </div>
-    <div id="TelaComent">
-
-    </div>-->
-
+    
     <div class="d-flex">
+        <!--Menu lateral-->
         <div id="tagMenuLateral"></div>
+
+        <!--Coloquei um templete de como ficaria os artigos da API, so para estilizar se ficar fazendo requisição, que é no max 50-->
+        <!--É para se caso ocorrer de a API não funcionar-->
         <main class="container-fluid">
             <h1 class="text-center p-3">ULTIMAS NOTÍCIAS</h1>
             <div class="container" id="tela">
@@ -72,19 +69,29 @@
     <div id="tagFooter"></div>
 
     <script>
+        //PUXANDO API DA NEWS API 
         fetch("https://newsapi.org/v2/everything?q=idosos&language=pt&apiKey=8178d96946e8481596a2347e96df1a05")
             .then((res) => res.json())
             .then((data) => {
 
 
                 let str = "";
+                //Coloquei so até 20 para não encher d+
                 for (i = 0, k = 0; k < 20; i++) {
+                    //coloquei em artigo um arigo para pegar as info
                     artigo = data.articles[i]
+
+                    //tive que separa a data, por isso usei split, pq estava em um formato diferente
                     let date=artigo.publishedAt.split('T')
+                    
+                    //Separei data de hora, pois vinha junto, então (hms[0] é a data) e (hm é a hora ja formatada)
                     let hms=date[1]
                     hm=hms.slice(0,-4)
-                    console.log(date)
-                    console.log(hms)
+
+                    //console.log(date)
+                    //console.log(hms)
+
+                    //Verificando se o artigo foi removido para não imprimir, pois se não verificar ele imprimi [REMOVED]
                     if (artigo.title == '[Removed]')
                         console.log(`${artigo[i]} foi removido`);
                     else {
@@ -104,6 +111,7 @@
                         k++;
                     }
                 }
+                //jogando no id TELA os artigos dentro de str
                 document.getElementById('tela').innerHTML = str
             })
     </script>
