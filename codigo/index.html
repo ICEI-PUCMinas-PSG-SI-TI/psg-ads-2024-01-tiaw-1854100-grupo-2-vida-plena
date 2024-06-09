@@ -75,7 +75,7 @@
                     let usuario = objDados.usuarios[i];
 
                     if (usuario.email == email && usuario.senha == senha) {
-                        alert('Encontrei')
+                        //alert('Encontrei')
                         UsuarioLogado(email, senha);
                         location.href = "homepage.html";
                     }
@@ -143,7 +143,7 @@
 
             for(i = 0; i < Usuarios.usuarios.length; i++){
                 usuario = Usuarios.usuarios[i];
-                console.log(usuario.nome)
+
                 if(usuario.email == email && usuario.senha == senha){
                     Usuarios.logado = [{"email": usuario.email, "senha": usuario.senha, "nome": usuario.nome, "sobrenome": usuario.sobrenome }];
                 }
