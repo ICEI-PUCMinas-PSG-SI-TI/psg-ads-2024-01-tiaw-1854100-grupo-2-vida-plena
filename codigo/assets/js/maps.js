@@ -39,22 +39,13 @@ function geoCodeConvert(address) {
     });
 }
 
-function createLi(className, textContent) {
-    const li = document.createElement('li');
-    li.classList.add(className);
-    li.textContent = textContent;
-    return li;
-}
 
-function createLocationInfo(nomeEvento, data, local, descricao) {
-    
-}
 
 document.addEventListener('DOMContentLoaded', () => {
     const map = initMap(); // Inicializa o mapa com a visão padrão de Belo Horizonte
 
     const selectedEventLocation = localStorage.getItem('selectedEventLocation');
-    const ulDescription = document.getElementById('event-description');
+
     if (selectedEventLocation) {
         const address = JSON.parse(selectedEventLocation);
         geoCodeConvert(address)
@@ -68,4 +59,72 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         console.error("Localização do evento selecionado não encontrada.");
     }
+
+    const ul = document.getElementById('event-description');
+    function createLi(className, textContent) {
+        const li = document.createElement('li');
+        li.classList.add(className);
+        li.textContent = textContent;
+        return li;
+    }
+
+    function randomTime() {
+        const startHour = new Date().setHours(8, 0, 0, 0);
+
+        const endHour = new Date().setHours(20, 0, 0, 0);
+
+        const randomGenerator = Math.random() * (endHour - startHour);
+
+        const randomHour = new Date(startHour + randomGenerator);
+
+        const minutes = randomHour.getMinutes();
+        randomHour.setMinutes(minutes + (30 - minutes % 30));
+
+        if (randomHour > endHour) {
+            randomTime = new Date(endHour);
+        }
+
+        return randomHour;
+    }
+
+    function formattedTime(time) {
+        const hours = time.getHours();
+        const minutes = time.getMinutes();
+
+        const formattedHour = hours.toString().padStart(2, '0');
+        const formattedMinutes = minutes.toString().padStart(2, '0');
+
+        return `${formattedHour}:${formattedMinutes}`;
+    }
+
+    function createInfo(ul, nome, date, hour, location, description) {
+        const liName = createLi('li-name', nome);
+        const liData = createLi('li-data', "Data: " + date);
+        const liHour = createLi('li-hour', "Horário: " + hour);
+        const liLocation = createLi('li-location', "Endereço: " + location);
+        const liDescription = createLi('li-description', "Descrição: " + description);
+        ul.appendChild(liName);
+        ul.appendChild(liData);
+        ul.appendChild(liHour);
+        ul.appendChild(liLocation);
+        ul.appendChild(liDescription);
+    }
+
+    const timeToFormat = randomTime();
+    const eventHour = formattedTime(timeToFormat);
+
+    function readLiInfo() {
+        const events = localStorage.getItem('selectedEvent') || [];
+        const parsedEvent = JSON.parse(events);
+
+        const randomHour = randomTime()
+        createInfo(ul, parsedEvent.name, parsedEvent.date, eventHour, parsedEvent.location, parsedEvent.description);
+    }
+
+    window.addEventListener('beforeunload', () => {
+        localStorage.removeItem('selectedEvent');
+        localStorage.removeItem('selectedEventLocation');
+    });
+
+    readLiInfo();
 });
