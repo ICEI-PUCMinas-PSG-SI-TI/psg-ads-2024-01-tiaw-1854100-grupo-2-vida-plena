@@ -110,6 +110,7 @@
                     <button class="btn btn-success btn-complete">Concluir</button>
                     <button class="btn btn-success btn-confirm">Confirmar Presença</button>
                     <button class="btn btn-danger btn-delete">Deletar</button>
+                    <button class="btn btn-success btn-ver-mais">Localização</button>
                     <div class="confirm-container mt-3 d-none">
                         <input type="text" class="form-control confirm-input" placeholder="Seu Nome" required>
                         <button class="btn btn-success mt-2 btn-save-confirm">Salvar</button>
@@ -123,6 +124,15 @@
                 eventItem.querySelector('.btn-confirm').addEventListener('click', (e) => toggleConfirmContainer(e));
                 eventItem.querySelector('.btn-save-confirm').addEventListener('click', (e) => confirmAttendance(e, index));
                 eventItem.querySelector('.btn-cancel-confirm').addEventListener('click', (e) => cancelAttendance(e, index));
+
+                    // Adiciona evento de clique para armazenar a localização do evento e redirecionar para o mapa
+                    eventItem.querySelector('.btn-ver-mais').addEventListener('click', () => {
+                        localStorage.setItem('selectedEvent', JSON.stringify(event));
+                        localStorage.setItem('selectedEventLocation', JSON.stringify(event.location));
+                        const newTab = window.open('maps.html', '_blank');
+                        newTab.focus(); // Garante que a nova guia seja trazida para o foco
+                    });
+
                 eventsList.appendChild(eventItem);
                 loadAttendance(eventItem, event.name);
             });
