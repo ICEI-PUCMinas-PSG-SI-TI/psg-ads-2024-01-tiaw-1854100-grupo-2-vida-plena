@@ -72,7 +72,7 @@
     <div id="tagFooter"></div>
 
     <script>
-        fetch("http://newsapi.org/v2/everything?q=idosos&language=pt&apiKey=8178d96946e8481596a2347e96df1a05")
+        fetch("https://newsapi.org/v2/everything?q=idosos&language=pt&apiKey=8178d96946e8481596a2347e96df1a05")
             .then((res) => res.json())
             .then((data) => {
 
@@ -80,17 +80,22 @@
                 let str = "";
                 for (i = 0, k = 0; k < 20; i++) {
                     artigo = data.articles[i]
+                    let date=artigo.publishedAt.split('T')
+                    let hms=date[1]
+                    hm=hms.slice(0,-4)
+                    console.log(date)
+                    console.log(hms)
                     if (artigo.title == '[Removed]')
                         console.log(`${artigo[i]} foi removido`);
                     else {
                         str += `
                     <hr style="height:1px;border-width:0;color:gray;background-color:gray">
-                    <div class="p-3 d-flex">
+                    <div class="p-3 d-xl-flex">
                         <div>
                             <h2>${artigo.title}</h2>
                             <p>${artigo.description}</p><br>
                             <div class="d-flex justify-content-between">
-                                <p4>Postado por ${artigo.author}, <i class="bi bi-clock"></i> ${artigo.publishedAt}</p4>
+                                <p4>Postado por ${artigo.author}, <i class="bi bi-clock"></i> ${date[0]} às ${hm} </p4>
                                 <a style="color:#19d080" href="${artigo.url}">Saiba mais</a>
                             </div>
                         </div>
