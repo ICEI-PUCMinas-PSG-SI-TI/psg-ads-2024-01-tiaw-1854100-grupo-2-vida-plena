@@ -8,7 +8,7 @@ function compartilharfeed(i) {
     if (navigator.share) {
         navigator.share({
             title: noticia.titulo_caixa,
-            text: noticia.descricao_caixa,
+            text: noticia.titulo_caixa,
             url: link
         })
             .then(() => console.log("Obrigado por compartilhar!"))
