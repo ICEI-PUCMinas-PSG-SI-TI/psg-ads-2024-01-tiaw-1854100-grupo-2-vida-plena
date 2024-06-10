@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notificações</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+  </style>
+  <!--INICIO - Script do JQuery e Função para inserir o cabeçalho-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script>
+    $(function () {
+      $("#tagCabecalho").load("cabecalho.html");
+      $("#tagMenuLateral").load("menulateral.html");
+      $("#tagFooter").load("footer.html");
+    });
+  </script>
+  <!--FIM-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body onload="CarregarNotificacoes()">
+
+  <div id="tagCabecalho"></div>
+  <div>
+
+    <div class="container-fluid d-flex">
+      <div class="d-flex container-fluid">
+        <div id="tagMenuLateral"></div>
+        <main role="main" class="col-md-9 ml-auto mr-auto col-lg-10 px-4">
+          <div
+            class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+            <h1 class="h2">Notificações</h1>
+          </div>
+          <div id="Tela"></div>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+          <script>
+            function CarregarNotificacoes(){
+              let Notificacoes = JSON.parse(localStorage.getItem("notificacoes"))
+              console.log(Notificacoes)
+              let strnotificacoes = '';
+              for (i = 0; i < Notificacoes.length; i++) {
+                let notificacao = Notificacoes[i]
+                console.log(notificacao.titulo_caixa)
+                strnotificacoes += `<br>${notificacao.Notificação}<br>Título: ${notificacao.titulo_caixa}<hr>`
+              }
+              document.getElementById('Tela').innerHTML = strnotificacoes;
+            }
+          </script>
+
+</body>
+
+</html>

@@ -84,6 +84,7 @@
             var descricao = document.getElementById('descricao_caixa').value;
 
             objDados = { noticias: [] };
+            objNotificacao = new Array();
 
             //Verificando se existe esse banco
             if (localStorage.hasOwnProperty("db")) {
@@ -91,14 +92,21 @@
                 //Se sim, ele faz o objeto "objDados" receber o banco de dados de nome "db" 
                 objDados = JSON.parse(localStorage.getItem("db"))
             }
+            if (localStorage.hasOwnProperty("notificacoes")) {
+
+                //Se sim, ele faz o objeto "objDados" receber o banco de dados de nome "db" 
+                objNotificacao = JSON.parse(localStorage.getItem("notificacoes"))
+            }
             //Se não ele faz ser add essa proxima linha de no banco de dados
 
             //Em vez de usar o push (adicionar na após a ultima posição) usei o unshift que add antes da primeira
             //O padrão é: id do input : variavel que recebeu seu valor
             objDados.noticias.unshift({ titulo_caixa: titulo, descricao_caixa: descricao });
+            objNotificacao.unshift({ titulo_caixa: titulo, 'Notificação': 'Nova Publicação' })
 
             //Tranformando as info adicionadas na variavel objDados em formato de string e enviando no lugar do banco atual
             localStorage.setItem('db', JSON.stringify(objDados))
+            localStorage.setItem('notificacoes', JSON.stringify(objNotificacao))
             alert('Salvo')
 
             location.href = "Feed.html"
