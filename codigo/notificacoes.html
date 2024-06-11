@@ -39,14 +39,19 @@
           <div id="Tela"></div>
           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
           <script>
-            function CarregarNotificacoes(){
+            function CarregarNotificacoes() {
               let Notificacoes = JSON.parse(localStorage.getItem("notificacoes"))
               console.log(Notificacoes)
               let strnotificacoes = '';
               for (i = 0; i < Notificacoes.length; i++) {
                 let notificacao = Notificacoes[i]
                 console.log(notificacao.titulo_caixa)
-                strnotificacoes += `<br>${notificacao.Notificação}<br>Título: ${notificacao.titulo_caixa}<hr>`
+                strnotificacoes += `<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">${notificacao.Notificação}</h5>
+    <p class="card-text">${notificacao.Titulo}</p>
+  </div>
+</div><hr>`
               }
               document.getElementById('Tela').innerHTML = strnotificacoes;
             }
