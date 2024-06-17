@@ -108,6 +108,7 @@ function abrircomentario(i) {
     var elemento = document.getElementById("comentar" + i);
     if (elemento.style.display === "none") {
         elemento.style.display = "block"; // Mostra o elemento
+        document.getElementById('comentario'+i).focus() //Indo direto para o input textarea!!
     } else {
         elemento.style.display = "none"; // Oculta o elemento
     }
