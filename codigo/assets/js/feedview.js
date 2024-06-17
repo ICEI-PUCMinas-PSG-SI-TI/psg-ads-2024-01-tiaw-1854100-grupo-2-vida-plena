@@ -165,10 +165,22 @@ function ImprimirComentarios(pos, objDados) {
 
     return TelaComent.innerHTML = strComentarios;
 }
-function LerComentarios(i) {
+function LerComentarios(pos) {
     objDados = JSON.parse(localStorage.getItem('db'))
-    objComentarios = objDados.noticias[i].comentarios;
+    //objComentarios = objDados.noticias[i].comentarios;
 
-    return objComentarios;
+    var strComentarios = '';
+
+    if( objDados.noticias[pos].hasOwnProperty("comentarios")){
+
+        for (var i = 0; i < objDados.noticias[pos].comentarios.length; i++) {
+            let comentario = objDados.noticias[pos].comentarios[i];
+
+            strComentarios += `<p>${comentario}</p>`;
+
+        }
+    }
+
+    return strComentarios;
 
 }//--FIM
