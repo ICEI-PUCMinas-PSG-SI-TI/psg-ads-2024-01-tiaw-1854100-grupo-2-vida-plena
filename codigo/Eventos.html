@@ -152,7 +152,7 @@
 
                 const newEvent = { name, date, location, description, completed: false };
                 const events = JSON.parse(localStorage.getItem('events')) || [];
-                let objNotificacao;
+                objNotificacao = new Array();;
                 if (localStorage.hasOwnProperty("notificacoes")) {
 
                     //Se sim, ele faz o objeto "objDados" receber o banco de dados de nome "db" 
