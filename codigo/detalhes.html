@@ -62,9 +62,9 @@
         let noticia = LerNoticia(i);
 
         let comentarios = LerComentarios(i);
-        let strImprimir = `<h3 class="text-center my-3">${noticia.titulo_caixa}</h3>
+        let strImprimir = `
                 <div class="p-1 border" id="${i}" style="width: 100%;">
-                <img src="https://picsum.photos/800/600?random=1" class="card-img-top" alt="...">
+                <img src="${noticia.titulo_caixa}" class="card-img-top" alt="...">
 
                 <div class="border-top">
                 <i type="button" style="color:${noticia.like};" onclick="btncurtir(${i})" class="bi bi-heart-fill mx-3" id="botaocurtir${i}"></i>
@@ -80,7 +80,6 @@
                 </div>
 
                 <div class="card-body">
-                <p class="card-text text-center"><strong>${noticia.titulo_caixa}</strong></p>
                 <p id="descricao" class="card-text p-3">${noticia.descricao_caixa}</p>
                 <h5 class="text-center"><strong>Comentarios</strong></h5>
                 <div class="container" id="TelaComent${i}">${comentarios}</div>

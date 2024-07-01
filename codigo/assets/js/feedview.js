@@ -48,7 +48,7 @@ function Carregar() {
         //Troquei essa informação por um card pronto do bootstrap
 
         strImprimir += `<div class="p-1 border my-5" id="${i}" style="width: 100%;">
-        <img src="https://picsum.photos/800/600?random=1" class="card-img-top" alt="...">
+        <img src="${noticia.titulo_caixa}" class="card-img-top" alt="...">
 
         <div class="border-top">
         <i type="button" style="color:${noticia.like};" onclick="btncurtir(${i})" class="bi bi-heart-fill mx-3" id="botaocurtir${i}"></i>
@@ -64,7 +64,6 @@ function Carregar() {
         </div>
 
         <div class="card-body">
-        <p class="card-text text-center"><strong>${noticia.titulo_caixa}</strong></p>
         <p id="descricao" class="card-text p-3">${noticia.descricao_caixa}</p>
         <p><a href="detalhes.html?id=${i}">Ver Publicação</a></p>
         </div><hr style="height:1px;border-width:0;color:gray;background-color:gray">
