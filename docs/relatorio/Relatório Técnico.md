@@ -153,6 +153,10 @@ ID	Restrição
 > Utilizamos a Ferramenta Miro para Edição e Criação Da Matriz CSD, Brainstorming, Mapa de Stakeholders e Entrevista Qualitativa. 
 
 ## Wireframes
+> Tela login e registro
+
+> ![Exemplo de Link para Wireframe](images/Login.png)
+
 > Tela Principal onde o Usuário irar escolher o que ele deseja ver, se será criação de Eventos, Localizar Eventos Disponivels ou Feed de Informações.
 
 > ![Exemplo de Link para Wireframe](images/HomePage.png)
@@ -163,22 +167,32 @@ ID	Restrição
 
 > Tela que conterá informações relevantes para os idosos.
 
-> ![Exemplo de Link para Wireframe](images/NoticiasIdosos.png)
+> ![Exemplo de Link para Wireframe](images/Eventos.png)
+
+> Tela do calendário que conterá as incrições em eventos.
+
+> ![Exemplo de Link para Wireframe](images/Calendario.png)
 
 > Tela da localização do evento.
 
 > ![Exemplo de Link para Wireframe](images/Maps.png)
 
-> Tela da localização do evento.
+> Tela de adicionar posts
 
-> ![Exemplo de Link para Wireframe](images/Maps.png) 
+> ![Exemplo de Link para Wireframe](images/AdicionarFeed.png) 
 
+> Tela de notificações de atualizações como novo evento e novo post.
+
+> ![Exemplo de Link para Wireframe](images/Notificacao.png) 
 
 
 ## Mapa de navegação
 
 > Mapa de Navegação de como o usuário deve realizar para utilizar todas as características do sistema. 
-> ![Exemplo de Diagrama de Navegação](images/UserFlow.png)
+> ![Exemplo de Diagrama de Navegação](images/UserFlowDesktop.png)
+
+> Mobile
+> ![Exemplo de Diagrama de Navegação](images/UserFlowMobile.png) 
 
 # Conclusões
 
