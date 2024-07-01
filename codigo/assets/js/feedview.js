@@ -126,6 +126,8 @@ function comentar(i) {
         var comentario = document.getElementById('comentario' + i).value;
         if (localStorage.hasOwnProperty('db')) {
             objDados = JSON.parse(localStorage.getItem('db'))
+            document.getElementById('comentario'+i).value=''; //Limpando input textarea após comentar!!
+            document.getElementById('comentar'+i).style.display='none'; //disabilitando input textarea após comentar!!
         }
         if (!objDados.noticias[i].comentarios) {
             objDados.noticias[i].comentarios = new Array();
