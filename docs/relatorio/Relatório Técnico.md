@@ -155,15 +155,25 @@ ID	Restrição
 ## Wireframes
 > Tela Principal onde o Usuário irar escolher o que ele deseja ver, se será criação de Eventos, Localizar Eventos Disponivels ou Feed de Informações.
 
-> ![Exemplo de Link para Wireframe](images/home_page.jpg)
+> ![Exemplo de Link para Wireframe](images/HomePage.png)
 
 > Tela onde o Usuario Irar Cadastrar um Evento.
 
-> ![Exemplo de Link para Wireframe](images/Evento.jpg)
+> ![Exemplo de Link para Wireframe](images/Evento.png)
 
-> Tela que irar informar data com todos os eventos criado e disponivels no site.
+> Tela que conterá informações relevantes para os idosos.
 
-> ![Exemplo de Link para Wireframe](images/calendario_page.jpg)
+> ![Exemplo de Link para Wireframe](images/NoticiasIdosos.png)
+
+> Tela da localização do evento.
+
+> ![Exemplo de Link para Wireframe](images/Maps.png)
+
+> Tela da localização do evento.
+
+> ![Exemplo de Link para Wireframe](images/Maps.png) 
+
+
 
 ## Mapa de navegação
 
