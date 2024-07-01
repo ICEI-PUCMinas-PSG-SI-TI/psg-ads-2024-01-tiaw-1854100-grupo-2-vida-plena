@@ -155,7 +155,7 @@ ID	Restrição
 ## Wireframes
 > Tela login e registro
 
-> ![Exemplo de Link para Wireframe](images/Login.png)
+> ![Exemplo de Link para Wireframe](images/Login.jpg)
 
 > Tela Principal onde o Usuário irar escolher o que ele deseja ver, se será criação de Eventos, Localizar Eventos Disponivels ou Feed de Informações.
 
