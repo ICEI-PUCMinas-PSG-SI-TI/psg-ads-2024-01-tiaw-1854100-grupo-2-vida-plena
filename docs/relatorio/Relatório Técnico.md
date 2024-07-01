@@ -179,20 +179,20 @@ ID	Restrição
 
 > Tela de adicionar posts
 
-> ![Exemplo de Link para Wireframe](images/AdicionarFeed.png) 
+> ![Exemplo de Link para Wireframe](images/AdicionarFeed.jpg) 
 
 > Tela de notificações de atualizações como novo evento e novo post.
 
-> ![Exemplo de Link para Wireframe](images/Notificacao.png) 
+> ![Exemplo de Link para Wireframe](images/Notificacao.jpg) 
 
 
 ## Mapa de navegação
 
 > Mapa de Navegação de como o usuário deve realizar para utilizar todas as características do sistema. 
-> ![Exemplo de Diagrama de Navegação](images/UserFlowDesktop.png)
+> ![Exemplo de Diagrama de Navegação](images/UserFlowDesktop.jpg)
 
 > Mobile
-> ![Exemplo de Diagrama de Navegação](images/UserFlowMobile.png) 
+> ![Exemplo de Diagrama de Navegação](images/UserFlowMobile.jpg) 
 
 # Conclusões
 
