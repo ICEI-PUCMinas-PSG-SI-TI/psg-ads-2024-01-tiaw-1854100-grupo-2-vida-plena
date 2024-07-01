@@ -159,7 +159,7 @@ ID	Restrição
 
 > Tela onde o Usuario Irar Cadastrar um Evento.
 
-> ![Exemplo de Link para Wireframe](images/Evento.png)
+> ![Exemplo de Link para Wireframe](images/Eventos.png)
 
 > Tela que conterá informações relevantes para os idosos.
 
@@ -178,7 +178,7 @@ ID	Restrição
 ## Mapa de navegação
 
 > Mapa de Navegação de como o usuário deve realizar para utilizar todas as características do sistema. 
-> ![Exemplo de Diagrama de Navegação](images/UserFlow.png)
+> ![Exemplo de Diagrama de Navegação](images/UserFlow.pdf)
 
 # Conclusões
 
