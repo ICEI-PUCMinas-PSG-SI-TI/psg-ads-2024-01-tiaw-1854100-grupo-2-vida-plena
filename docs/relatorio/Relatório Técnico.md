@@ -48,8 +48,8 @@ Os principais stakeholders do projeto incluem familiares próximos, proprietári
 
 É notório no Brasil a recorrência do assunto relacionado a saúde mental dos idosos nos noticiários. Alguns dados fornecidos pela Scielo, dizem que "As taxas de suicídio mais elevadas concentram-se na população acima de 80 anos", assim como outro dado apresentado pelo Governo Federal que constata que "Em 2019, os idosos entre 60 e 64 anos representavam a faixa etária proporcionalmente mais afetada: 13,2% tinham sido diagnosticados com depressão", evidenciando portanto, um problema que ocorre por todo o Brasil, tornando-se assim uma preocupação nacional.
 - Fontes:
-  https://www.scielosp.org/pdf/rsp/2004.v38n6/804-810/pt
-  https://www.gov.br/mdh/pt-br/navegue-por-temas/observatorio-nacional-da-familia/fatos-e-numeros/5.SADEMENTAL28.12.22.pdf
+- https://www.scielosp.org/pdf/rsp/2004.v38n6/804-810/pt
+- https://www.gov.br/mdh/pt-br/navegue-por-temas/observatorio-nacional-da-familia/fatos-e-numeros/5.SADEMENTAL28.12.22.pdf
 
 ## Objetivos
 
