@@ -171,7 +171,7 @@ ID	Restrição
 
 > Tela do calendário que conterá as incrições em eventos.
 
-> ![Exemplo de Link para Wireframe](images/Calendario.png)
+> ![Exemplo de Link para Wireframe](images/Calendario.jpg)
 
 > Tela da localização do evento.
 
