@@ -178,7 +178,7 @@ ID	Restrição
 ## Mapa de navegação
 
 > Mapa de Navegação de como o usuário deve realizar para utilizar todas as características do sistema. 
-> ![Exemplo de Diagrama de Navegação](images/UserFlow.pdf)
+> ![Exemplo de Diagrama de Navegação](images/UserFlow.png)
 
 # Conclusões
 
