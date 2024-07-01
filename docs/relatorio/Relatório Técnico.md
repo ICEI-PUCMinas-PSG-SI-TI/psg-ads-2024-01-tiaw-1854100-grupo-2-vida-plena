@@ -159,7 +159,7 @@ ID	Restrição
 
 > Tela onde o Usuario Irar Cadastrar um Evento.
 
-> ![Exemplo de Link para Wireframe](images/criarEvento_page.jpg)
+> ![Exemplo de Link para Wireframe](images/Evento.jpg)
 
 > Tela que irar informar data com todos os eventos criado e disponivels no site.
 
@@ -178,4 +178,6 @@ ID	Restrição
 > o que foi possível alcançar e o que ficou para um trabalho futuro, e relembrando
 > as principais dificuldes encontradas e como foi possível contorná-las. 
 
-
+Desenvolver este projeto foi uma experiência transformadora para nossa equipe iniciante em programação. Nosso objetivo era criar uma plataforma que oferecesse suporte emocional e informacional para idosos, combatendo a depressão através de interações positivas e recursos de saúde. Conseguimos implementar com sucesso funcionalidades essenciais como o feed de experiências, a agenda de eventos e o mapa de localização, noticias relacionadas a essa idade, proporcionando um ambiente inclusivo e acolhedor.
+Durante o desenvolvimento, enfrentamos várias dificuldades técnicas e de concepção. A implementação de linguagens e ferramentas foi desafiadora inicialmente, assim como implementar as primeiras funções do projeto. Através do estudo conseguimos contornar essas dificuldades, melhorando constantemente a usabilidade e a funcionalidade da plataforma.
+Olhando para o futuro, reconhecemos que há espaço para expansão e aprimoramento. Integrar mais recursos de saúde específicos, como guias de bem-estar e acesso a profissionais de saúde, seriam essenciais. Este projeto não apenas fortaleceu nossas habilidades técnicas, mas também reforçou nosso compromisso em utilizar a tecnologia para promover o bem-estar e a inclusão social.
